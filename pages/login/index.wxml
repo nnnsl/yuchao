@@ -1,0 +1,45 @@
+<!--pages/Apply_cp/index.wxml-->
+<!-- <view class="Apply_cp">
+  <view class="center logo-view">
+    <image class="logo" src="../../images/logo.png"></image>
+  </view>
+  <view class="center">
+    <view>
+      <image class="user_logo" src="../../images/logo.png"></image>
+    </view>
+    <view class="input-view">
+      <view>
+        <input placeholder="用户名称" focus="{{focus}}" />
+      </view>
+    </view>
+  </view>
+</view> -->
+<van-notify id="van-notify" />
+<view class="container">
+  <view class="login-icon">
+    <image class="login-img" src="../../images/logo.png"></image>
+  </view>
+  <view class="login-from">
+
+    <!--账号-->
+    <view class="inputView">
+      <image class="nameImage" src="../../images/user.png"></image>
+      <input class="inputText" placeholder="用户名称" bindinput="phoneInput" />
+    </view>
+    <view class="line"></view>
+
+    <!--密码-->
+    <view class="inputView">
+      <image class="keyImage" src="../../images/psd.png"></image>
+      <input class="inputText" password="true" placeholder="密码" bindinput="passwordInput" />
+    </view>
+    <view class="line"></view>
+    <view>
+      <text class="forget">忘记密码？</text>
+    </view>
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="loginBtn" disabled="{{disabled}}" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

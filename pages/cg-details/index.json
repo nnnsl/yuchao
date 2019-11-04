@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "show_dialog": "/component/custom-dialog/index",
+    "van-notify": "/dist/notify/index",
+    "van-dialog": "/dist/dialog/index",
+    "van-toast": "/dist/toast/index"
+  },
+  "navigationBarTitleText": "场馆详情",
+  "navigationBarBackgroundColor": "#FFC000"
+}

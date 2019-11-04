@@ -1,0 +1,23 @@
+<!--component/custom-dialog/index.wxml-->
+<!-- 弹窗遮罩层 -->
+		<view class='shade' hidden="{{flag}}">
+		</view>
+
+		<!-- 弹窗 -->
+		<view class='shade_box popup' hidden="{{flag}}">
+			<view class="lock-ico">
+				<image src="/images/match/lock.png"></image>
+			</view>
+
+			<view class="shade_box_bg">
+				<view class='content'>{{title}}</view>
+				<view class="sure_btn" bindtap='_success'>
+					<button>确定</button>
+				</view>
+				<image src="/images/match/ty.png" class="ty"></image>
+			</view>
+
+			<view class="close_btn" bindtap='_error'>
+				<image src="/images/match/close.png" class='msg'></image>
+			</view>
+		</view>

@@ -1,0 +1,60 @@
+<!--pages/Apply_cp/index.wxml-->
+<view class="all_view">
+  <!-- 轮播图 -->
+  <!-- <view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:187px">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view> -->
+  <!-- 场馆信息 -->
+  <view class="cg_detail">
+    <view class="cg_item">
+      <text class="cg_title">场馆名称：</text>
+      <text class="cg_msg">　　　贺龙体育馆</text>
+      <view class="line"></view>
+    </view>
+    <view class="cg_item">
+      <text class="cg_title">场馆区域：</text>
+      <text class="cg_msg">　　　长沙市-岳麓区</text>
+      <view class="line"></view>
+    </view>
+    <view class="cg_item">
+      <text class="cg_title">场馆位置：</text>
+      <text class="cg_msg">　　　长沙市岳麓区枫林三路728号</text>
+      <view class="line"></view>
+    </view>
+    <view class="cg_item">
+      <text class="cg_title">场馆市场价：</text>
+      <text class="cg_msg">　　50元</text>
+      <view class="line"></view>
+    </view>
+    <view class="cg_item">
+      <text class="cg_title">场馆简介：</text>
+      <text class="cg_msg">　　　xxxxxxxxxxxxxxxxxxxxxxx</text>
+    </view>
+  </view>
+  <!-- 预定列表 -->
+  <view class="Scheduled">
+    <view class="Scheduled_item">
+      <view class="Scheduled_title">统一预定</view>
+      <view class="Scheduled_done">添加</view>
+    </view>
+    <view class="line2"></view>
+    <view class="Scheduled_item2" wx:for="item in 10" wx:key="index">
+      <view class="Scheduled_avter">
+        <image src="../../images/avter.png" style="height:33px;width:33px;"></image>
+      </view>
+      <view class="Scheduled_msg">
+        <view class="user_name">{{index}}</view>
+        <view class="user_tel">188999090909</view>
+      </view>
+      <view class="Scheduled_sex">
+        <image src="../../images/women.png" style="height:15px;width:29px;"></image>
+      </view>
+    </view>
+  </view>
+</view>

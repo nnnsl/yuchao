@@ -1,0 +1,125 @@
+/* component/custom-dialog/index.wxss */
+
+/* 弹窗遮罩 */
+
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+.shade_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 11;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* 当前弹窗样式 */
+
+.popup {
+  width: 524rpx;
+  height: 624rpx;
+}
+
+.shade_box_bg {
+  width: 524rpx;
+  height: 424rpx;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rpx;
+  margin-top: 20%;
+  z-index: 20;
+}
+
+.ty {
+  width: 524rpx;
+  height: 424rpx;
+}
+
+.popup .content {
+  margin: 40rpx 80rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #3a3a3a;
+  position: absolute;
+  margin-top: 190rpx;
+}
+
+.lock-ico, .lock-ico image {
+  width: 202rpx;
+  height: 202rpx;
+  z-index: 100;
+  position: absolute;
+  margin: 20rpx auto;
+}
+
+.lock-ico {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.popup button {
+  color: #c36d16;
+  background-color: #ffc000;
+  width: 452rpx;
+  height: 86rpx;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 40rpx;
+  border-radius: 12rpx;
+  font-size: 26rpx;
+  line-height: 86rpx;
+}
+
+.sure_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.close_btn, .close_btn image {
+  z-index: 100;
+  position: absolute;
+}
+
+.close_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.close_btn image {
+  width: 58rpx;
+  height: 58rpx;
+  margin-top: 30rpx;
+}

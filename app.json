@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/cg-details/index",
+    "pages/aaa/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#333333",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#D2D2D2",
+    "selectedColor": "#FFC000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/aaa/index",
+        "iconPath": "images/tabbar/sy.png",
+        "selectedIconPath": "images/tabbar/sy_ced.png",
+        "text": "收益"
+      },
+      {
+        "pagePath": "pages/cg-details/index",
+        "iconPath": "images/tabbar/rcb.png",
+        "selectedIconPath": "images/tabbar/rcb_ced.png",
+        "text": "场地预定"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

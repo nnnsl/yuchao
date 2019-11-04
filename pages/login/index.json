@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-switch": "/dist/switch/index",
+    "van-notify": "/dist/notify/index",
+    "tabbar": "/component/custom-tabbar/tabbar"
+  },
+  "navigationBarTitleText": "路",
+  "navigationBarBackgroundColor": "#FFC000"
+}

@@ -1,0 +1,172 @@
+<!--pages/cg-details/index.wxml-->
+<view scroll-y style="height: 100%;" class="cg-details">
+  <van-notify id="van-notify" />
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />
+  <!-- <view class="cg-top">
+    <image src="/images/reserve/top-bg.png" id="top-bg"></image>
+    <view class="cg-top-main">
+      <view class="main-tittle">{{venueName}}</view>
+      <view>地址：
+        <text>{{venueAddress}}</text>
+      </view>
+      <view>均价：
+        <text>{{  avePrice}}</text>
+      </view>
+      <view>评分：
+        <text>{{score}}</text>
+      </view>
+    </view>
+
+  </view> -->
+
+  <!-- 选择时间场次 -->
+  <view class="choose-state">
+    <view style="display:flex;">
+      <text>时间：</text>
+      <view class="time">2019</view>
+      <text style="margin: 0px 10rpx;">年</text>
+      <view class="time">2019</view>
+      <text style="margin-left:10rpx;">月</text>
+    </view>
+  </view>
+  <!-- 预定日期 -->
+  <view class="choose-date">
+    <view class="choose-tittle">
+      <view class="center">
+        <view class="outline"></view>
+        <view>　场内预定</view>
+      </view>
+      <view class="center" style="margin-left: 60rpx;">
+        <view class="online"></view>
+        <view>　线上预定</view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="date-main">
+      <view class="{{index==idx?'choosed-li':'date-li'}}" wx:for="{{dateArr}}" wx:key="item" bindtap="goIndex" data-index="{{index}}">
+        <!-- <view class="week">{{item[0]}}</view>
+        <view class="week">{{item[2]}}月</view> -->
+        <view data-indate="{{item[1]}}" data-inmonth="{{item[2]}}">{{item[1]}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="choose-main">
+
+    <view class="choose-top">
+      <view class="choose-top-left"></view>
+      <view class="choose-top-right">
+        <view class="right-li" wx:for="{{area}}" wx:key="index">{{index + 1}}号</view>
+      </view>
+    </view>
+
+    <view class="choose-body">
+      <view class="choose-body-left">
+        <view class="choose-body-left-li" wx:for="{{time}}" wx:key="index">{{item.time}}</view>
+      </view>
+
+      <view class="choose-body-right">
+
+        <view class="choose-body-right-column" wx:for="{{areaOption}}" bindtap="chooseArea" wx:key="index" data-cg="{{index + 1}}">
+          <view id="{{item.timeId}}-{{item.siteId}}" class="site-li {{item.ischoose==true?'site-li2':item.isselect==true?'site-choose':''}}" wx:for="{{item}}" wx:key="index" wx:for-item="item" data-id="{{item.siteId}}" data-hid="{{item.timeId}}" data-isChoose="{{item.ischoose}}"
+            data-isselect="{{item.isselect}}" data-price="{{item.price}}" data-time="{{item.time}}">
+            <!-- <image src="../../images/chose.png" style="width: 100%;height: 100%;" hidden="{{item.ischoose==true?false:true}}"></image> -->
+          </view>
+
+
+        </view>
+
+      </view>
+
+
+    </view>
+
+  </view>
+
+  <!-- 提交订单 -->
+  <!-- <view class="submit-dd">
+
+    <view class="submit-left2">
+
+
+      <view class="choosed2">
+        <view class="choosed-list2" wx:for="{{dataList}}" wx:key="index"> -->
+  <!-- 时间 -->
+  <!-- <view>2019年</view>
+          <view>{{item.inmonth}}月</view>
+          <view>{{item.day}}日</view>
+          <view>{{item.areaId}}号场</view>
+          <view>{{item.time}}</view>
+        </view>
+      </view>
+
+    </view>
+
+    <view class="submit-right">
+      <view class="money">
+        ￥
+        <text>{{totalMoney}}</text>
+      </view>
+      <view class="submit-btn" bindtap="showPopup">
+        提交订单
+      </view>
+
+    </view> -->
+  <!-- 弹窗遮罩层 -->
+  <!-- <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view> -->
+
+  <!-- 弹窗 -->
+  <!-- <view class='shade_box popup' hidden='{{popup}}'>
+
+      <view class="shade-tittle">
+        <view class="txt">支付订单</view>
+        <image src="/images/match/pay-bg1.png"></image>
+      </view>
+
+      <view class="shade-main">
+
+        <view class="cg li">
+          <text>场馆：  </text>
+          <view style="margin-top: 10rpx;">{{venueName}}</view>
+        </view>
+
+        <view class="address li">
+          <text>地址：</text>
+          <view style="margin-top: 10rpx;">{{venueAddress}}</view>
+        </view>
+
+        <view class="date li" style="height: 177rpx;">
+          <text>座位：</text>
+          <view class="choosed2">
+            <view class="choosed-list2" wx:for="{{dataList}}" wx:key="index"> -->
+  <!-- 时间 -->
+  <!-- <view>2019年</view>
+              <view>{{item.inmonth}}月</view>
+              <view>{{item.day}}日</view>
+              <view>{{item.areaId}}号场</view>
+              <view>{{item.time}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="cs li">
+          <text>金额：</text>
+          <view style="margin-top: 10rpx;">{{totalMoney}}</view>
+        </view>
+
+        <view class="pay-box">
+          <view class="pay-txt" bindtap="submit_record">确定支付</view>
+          <image src="/images/match/sure-pay.png"></image>
+        </view>
+
+      </view>
+
+    </view>
+
+
+  </view> -->
+  <show_dialog id='showModal' title='您一次最多只能选择4个场地~' bind:error='no' bind:success="yes">
+  </show_dialog>
+
+</view>

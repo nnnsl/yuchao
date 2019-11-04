@@ -1,0 +1,154 @@
+/* pages/aaa/index.wxss */
+
+page {
+  background-color: #eee;
+}
+
+.demo-text-1 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782d7;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+}
+
+.demo-text-2 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+}
+
+.demo-text-3 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: saddlebrown;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+}
+
+/* 线条 */
+
+.line {
+  width: 94%;
+  height: 1px;
+  background-color: #eee;
+  margin-top: 1px;
+}
+
+.line2 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  margin-top: 1px;
+}
+
+/* 场馆详情 */
+
+.cg_detail {
+  height: 220px;
+  background-color: #fff;
+}
+
+.cg_item {
+  padding-left: 20px;
+  line-height: 38px;
+}
+
+.cg_title {
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  line-height: 31px;
+}
+
+.cg_msg {
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 31px;
+}
+
+/* 预定 */
+
+.Scheduled {
+  padding: 0px 19px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.Scheduled_item {
+  line-height: 38px;
+  display: flex;
+}
+
+.Scheduled_item2 {
+  line-height: 45px;
+  height: 45px;
+  display: flex;
+}
+
+.Scheduled_title {
+  width: 50%;
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 31px;
+}
+
+.Scheduled_done {
+  width: 50%;
+  text-align: right;
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 192, 0, 1);
+  line-height: 31px;
+}
+
+.Scheduled_avter {
+  width: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.Scheduled_sex {
+  display: flex;
+  align-items: center;
+}
+
+.Scheduled_msg {
+  width: 80%;
+}
+
+.user_name {
+  height: 50%;
+  font-size: 11px;
+  font-family: Adobe Heiti Std;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 1);
+  line-height: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.user_tel {
+  height: 50%;
+  font-size: 10px;
+  font-family: Adobe Heiti Std;
+  font-weight: normal;
+  color: rgba(242, 61, 61, 1);
+  line-height: 7px;
+  display: flex;
+  align-items: center;
+}
