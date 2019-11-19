@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-dialog": "/dist/dialog/index"
+  },
+  "navigationBarTitleText": "俱乐部信息",
+  "navigationBarBackgroundColor": "#FFC000"
+}

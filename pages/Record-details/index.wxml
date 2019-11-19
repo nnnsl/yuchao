@@ -1,0 +1,31 @@
+<!--pages/Record-details/index.wxml-->
+<view class="Record-details">
+
+  <view class="Record-details-top">
+
+    <view class="top-main"></view>
+
+  </view>
+
+  <!-- 上半场赛况 -->
+  <view class="first-match">
+    <view class="first-match-title">上半场赛况</view>
+    <view class="first-match-main">
+      <view class="li">
+        <view class="time">
+          <text>XXX</text>
+        </view>
+        <view class="msg">
+          <text>XXX</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 下半场赛况 -->
+
+  <view class="second-match"></view>
+
+
+</view>

@@ -1,0 +1,62 @@
+/* pages/bindphone/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  width: 96%;
+  height: 230rpx;
+  margin: 0 auto;
+  margin-top: 45%;
+  background: rgba(67, 67, 67, 1);
+  box-sizing: border-box;
+  padding: 10rpx 50rpx;
+  border-radius: 14rpx;
+}
+
+.input-box .input {
+  height: 50%;
+  color: #999999;
+}
+
+.input-box input {
+  height: 100%;
+}
+
+.send {
+  width: 150rpx;
+  height: 66rpx;
+  margin: auto 0;
+  color: rgba(51, 51, 51, 1);
+  font-size: 26rpx;
+}
+
+.yzm-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_box {
+  width: 100%;
+  display: flex;
+  margin-top: 80rpx;
+}
+
+.btn_box button {
+  width: 296rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 26rpx;
+  background: rgba(238, 238, 238, 1);
+}
+
+.btn_box .bind {
+  background: linear-gradient(0deg, rgba(255, 192, 0, 1), rgba(254, 225, 138, 1));
+  color: #c36d16;
+}

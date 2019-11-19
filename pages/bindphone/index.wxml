@@ -1,0 +1,22 @@
+<view class="content">
+
+  <view class="input-box">
+    <!-- 手机号 -->
+    <view class="phone-box input">
+      <input placeholder="手机号码:" type="number" bindinput='getPhoneValue' value='{{phone}}'/>
+    </view>
+    <!-- 验证码 -->
+    <view class="yzm-box input">
+      <input placeholder="验证码:" class="yzm" type="number" bindinput='getCodeValue' value='{{code}}'/>
+      <!-- 发送按钮 -->
+      <button class="send" bindtap='getVerificationCode'>{{codename}}</button>
+    </view>
+
+  </view>
+  <!-- 取消/绑定 -->
+  <view class="btn_box">
+    <button bindtap="bindCancel">取消</button>
+    <button class="bind" bindtap='save'>绑定手机号</button>
+  </view>
+
+</view>

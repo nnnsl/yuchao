@@ -1,0 +1,39 @@
+<!--pages/real-name/index.wxml-->
+<view class="real-name">
+
+<view class="input-main">
+<view class="name">
+  <text>真实姓名</text>
+  <input placeholder="请输入您的姓名"></input>
+
+</view>
+<view class="IDcard">
+<text>身份证号码</text>
+<input placeholder="请输入您的身份证号"></input>
+</view>
+
+</view>
+
+
+<!-- 上传照片 -->
+
+<view class="pic-title">身份证照片</view>
+
+<view class="pic-btn">
+
+<view class="id-positive idPic" bindtap="uploadimg">
+<image src="{{source==''?'/images/my/renmian.png':source}}"></image>
+</view>
+
+  <view class="id-back idPic" bindtap="uploadimg2">
+<image  src="{{source2==''?'/images/my/guohui.png':source2}}"></image>
+</view>
+
+</view>
+
+<view class="upload-btn">
+<view class="text">点击上传</view>
+
+<image src="/images/my/ty.png"></image>
+</view>
+</view>

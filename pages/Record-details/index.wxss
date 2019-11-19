@@ -1,0 +1,82 @@
+/* pages/Record-details/index.wxss */
+
+page, .Record-details {
+  height: 100%;
+  background-color: #333333;
+}
+
+.Record-details-top {
+  width: 100%;
+  height: 434rpx;
+  background: linear-gradient(0deg, rgba(222, 183, 67, 1) 0%, rgba(247, 236, 207, 1) 100%);
+  box-shadow: 0px 22rpx 58rpx 0px rgba(0, 37, 78, 0.21);
+  border-radius: 0px 0px 54rpx 54rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-main {
+  width: 662rpx;
+  height: 332rpx;
+  background: rgba(253, 255, 255, 1);
+  border-radius: 0px 0px 54rpx 54rpx;
+}
+
+/* 上半场赛况 */
+
+.first-match {
+  width: 630rpx;
+  margin: 0 auto;
+}
+
+.first-match-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(253, 255, 255, 1);
+  margin: 50rpx 0 30rpx;
+}
+
+.li {
+  height: 54rpx;
+  width: 630rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+
+.time {
+  width: 138rpx;
+  height: 56rpx;
+  background: rgba(63, 184, 239, 1);
+  border-radius: 6rpx;
+  transform: skewX(-45deg);
+  text-align: center;
+}
+
+.time text {
+  display: inline-block;
+  transform: skewX(45deg);
+  font-size: 28rpx;
+  font-weight: bold;
+  color: rgba(50, 50, 50, 1);
+  line-height: 56rpx;
+}
+
+.msg {
+  width: 452rpx;
+  height: 56rpx;
+  background: rgba(213, 131, 50, 1);
+  border-radius: 6rpx;
+  transform: skewX(-45deg);
+  text-align: center;
+}
+
+.msg text {
+  display: inline-block;
+  transform: skewX(45deg);
+  font-size: 28rpx;
+  font-weight: bold;
+  color: rgba(50, 50, 50, 1);
+  line-height: 56rpx;
+}

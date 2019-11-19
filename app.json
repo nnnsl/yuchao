@@ -1,8 +1,33 @@
 {
   "pages": [
-    "pages/login/index",
+    "pages/authorize/index",
+    "pages/reserve/index",
+    "pages/match/index",
+    "pages/bindphone/index",
+    "pages/home/index",
+    "pages/club/index",
+    "pages/my/index",
+    "pages/myjlb/index",
+    "pages/one-match/index",
+    "pages/my-club/index",
+    "pages/join-club/index",
+    "pages/create-club/index",
+    "pages/cg-Order/index",
+    "pages/bs-Order/index",
+    "pages/real-name/index",
+    "pages/Apply-cp/index",
     "pages/cg-details/index",
-    "pages/aaa/index"
+    "pages/yy-Order/index",
+    "pages/group-match/index",
+    "pages/bs-Order-details/index",
+    "pages/Record-details/index",
+    "pages/pay-success/index",
+    "pages/match-order/index",
+    "pages/member-list/index",
+    "pages/record-list/index",
+    "component/custom-dialog/index",
+    "pages/club-msg/index",
+    "pages/total-rankings/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -20,16 +45,35 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/aaa/index",
-        "iconPath": "images/tabbar/sy.png",
-        "selectedIconPath": "images/tabbar/sy_ced.png",
-        "text": "收益"
+        "pagePath": "pages/home/index",
+        "iconPath": "images/tabbar/shouye.png",
+        "selectedIconPath": "images/tabbar/shouye02.png",
+        "text": "首页"
       },
       {
-        "pagePath": "pages/cg-details/index",
-        "iconPath": "images/tabbar/rcb.png",
-        "selectedIconPath": "images/tabbar/rcb_ced.png",
-        "text": "场地预定"
+        "pagePath": "pages/reserve/index",
+        "iconPath": "images/tabbar/yuding.png",
+        "selectedIconPath": "images/tabbar/yuding02.png",
+        "text": "预定"
+      },
+      {
+        "pagePath": "pages/match/index",
+        "iconPath": "/images/tabbar/bisai.png",
+        "selectedIconPath": "/images/tabbar/bisai.png",
+        "text": "比赛",
+        "isSpecial": true
+      },
+      {
+        "pagePath": "pages/club/index",
+        "iconPath": "images/tabbar/julebu.png",
+        "selectedIconPath": "images/tabbar/julebu02.png",
+        "text": "俱乐部"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/tabbar/wode.png",
+        "selectedIconPath": "images/tabbar/wode02.png",
+        "text": "我的"
       }
     ]
   },

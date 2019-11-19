@@ -1,0 +1,323 @@
+/* pages/club/index.wxss */
+
+page {
+  overflow-y: auto;
+  height: 100%;
+  background-color: #333;
+}
+
+.allView {
+  height: 1000px;
+  position: relative;
+}
+
+/* 未加入 */
+
+.club {
+  height: 100%;
+  position: relative;
+}
+
+.club-main {
+  width: 560rpx;
+  height: 564rpx;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 50rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#club-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.found-logo, .found-logo image, .join-logo, .join-logo image {
+  width: 428rpx;
+  height: 108rpx;
+}
+
+.found-logo, .join-logo {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.found-logo {
+  margin-bottom: 50rpx;
+}
+
+.found-text, .join-text {
+  position: absolute;
+  height: 68rpx;
+  width: 100%;
+  line-height: 68rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+}
+
+.found-text image, .join-text image {
+  width: 42rpx;
+  height: 48rpx;
+  margin-right: 40rpx;
+}
+
+/* 已加入 */
+
+.my-club {
+  height: 100%;
+}
+
+.club-msg {
+  width: 716rpx;
+  height: 264rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 14rpx;
+  margin: 16rpx auto 30rpx;
+  letter-spacing: 3rpx;
+}
+
+.club-msg-name {
+  height: 202rpx;
+  box-sizing: border-box;
+  padding: 34rpx 0 0 22rpx;
+  display: flex;
+  align-items: center;
+}
+
+.guy-pic {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 22rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.club-msg-text {
+  height: 62rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.club-title {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 10rpx;
+}
+
+.msg {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+}
+
+.club-daunWei {
+  height: 62rpx;
+  background-color: #fff;
+  border-radius: 0px 0px 14rpx 14rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 24rpx;
+}
+
+.club-daunWei text {
+  font-size: 24rpx;
+  font-weight: 800;
+  color: rgba(153, 153, 153, 1);
+}
+
+/* 俱乐部成员 */
+
+.club-all {
+  width: 716rpx;
+  /* height: 322rpx; */
+  background: rgba(67, 67, 67, 1);
+  border-radius: 14rpx 14rpx 0 0;
+  margin: 0 auto 20rpx;
+}
+
+.club-all-title {
+  height: 68rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+}
+
+.club-all-title image {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 40rpx;
+}
+
+.guy-num {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(255, 192, 0, 1);
+}
+
+.all-box {
+  height: 248rpx;
+  /* border: 2rpx dashed rgba(255, 255, 255, 0.2); */
+}
+
+.man, .woman {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.man-bg, .woman-bg {
+  float: left;
+  position: absolute;
+  height: 125rpx;
+  width: 25%;
+}
+
+.woman-bg {
+  right: 0;
+}
+
+.man-bg image, .woman-bg image {
+  width: 160rpx;
+  height: 125rpx;
+  display: block;
+}
+
+#man, #woman {
+  width: 100%;
+  height: 125rpx;
+  display: block;
+}
+
+.bisai-title {
+  width: 710rpx;
+  height: 84rpx;
+  margin: 10rpx auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 比赛 */
+
+.bisai-title image {
+  width: 16rpx;
+  height: 28rpx;
+}
+
+.bisai-title text {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.cg-content {
+  width: 716rpx;
+  height: 140rpx;
+  border-radius: 14rpx;
+  margin: 0 auto 40rpx;
+  background-color: #fff;
+  display: flex;
+  letter-spacing: 3rpx;
+}
+
+.cg-left {
+  width: 578rpx;
+  height: 140rpx;
+  box-sizing: border-box;
+  padding: 11rpx 30rpx 0;
+  font-size: 20rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.cg-right {
+  width: 138rpx;
+  height: 140rpx;
+  background: rgba(104, 153, 199, 1);
+  border-radius: 0px 14rpx 14rpx 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.txt {
+  margin-bottom: 16rpx;
+}
+
+.cg-left .li {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.zhanji-main {
+  width: 706rpx;
+  height: 280rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 14rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 36rpx 26rpx 0;
+  letter-spacing: 4rpx;
+}
+
+.zhanji-main image {
+  width: 78rpx;
+  height: 76rpx;
+  margin-right: 30rpx;
+}
+
+.zj-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhanji-text, .zhanji-num {
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.zhanji-num {
+  align-items: flex-end;
+}
+
+#zhanji, #all-num {
+  font-size: 28rpx;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+}
+
+#shenglv, #bfb {
+  font-size: 24rpx;
+  font-weight: 800;
+  color: rgba(225, 77, 94, 1);
+}

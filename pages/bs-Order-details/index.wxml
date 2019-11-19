@@ -1,0 +1,56 @@
+<!--pages/bs-Order-details/index.wxml-->
+<view class="bs-Order-details">
+  <!-- 基本信息 -->
+  <view class="Order-msg">
+    <view class="Order-msg-tittle">
+      <text>基本信息</text>
+    </view>
+<view class="Order-msg-main">
+
+<view class="name li"><text>姓名：</text><view>XXX</view></view>
+<view class="time li"><text>预约时间：</text><view>XXX</view></view>
+<view class="cg-name li"><text>场馆名称：</text><view>XXX</view></view>
+<view class="cg-address li"><text>场馆位置：</text><view>XXX</view></view>
+<view class="yy-area li"><text>预约场区：</text><view>XXX</view></view>
+
+</view>
+
+  </view>
+
+  <!-- 比赛结果 -->
+  <view class="bs-result" bindtap="Record_details">
+  
+  <view class="bs-result-tittle">
+  <text>比赛结果</text>
+  </view>
+
+  <view class="bs-result-main">
+  
+  <view class="pic-box">
+  
+  <view class="win">
+  <text>胜利</text>
+  <image src="/images/my/win-bg.png"></image>
+  </view>
+
+  <view class="fail">
+  <text>失败</text>
+  <image src="/images/my/fail-bg.png"></image>
+  </view>
+  
+  </view>
+
+  <view class="bs-result-down">
+  <view class="money"><text>金额：</text><view>XXX</view></view>
+  <view class="grade"><text>个人等级：</text><view>XXX</view></view>
+  
+  </view>
+  
+  </view>
+
+
+
+  </view>
+
+
+</view>

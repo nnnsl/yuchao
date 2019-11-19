@@ -1,0 +1,82 @@
+<!--pages/match-order/index.wxml-->
+<view class="match-order">
+
+  <!-- 基本信息 -->
+
+  <view class="msg">
+    <view class="msg-tittle">
+      <text>基本信息</text>
+    </view>
+
+    <view class="msg-main">
+
+      <view class="name li">
+        <view class="main-left">
+          <image src="/images/match/name.png"></image>
+          <text>姓名：</text>
+        </view>
+        <view class="main-right">
+          XXX
+        </view>
+      </view>
+
+      <view class="time li">
+        <view class="main-left">
+          <image src="/images/match/time.png"></image>
+          <text>比赛时间：</text>
+        </view>
+        <view class="main-right">
+          XXX
+        </view>
+      </view>
+
+      <view class="address li">
+        <view class="main-left">
+          <image src="/images/match/address.png"></image>
+          <text>场馆位置：</text>
+        </view>
+        <view class="main-right">
+          XXX
+        </view>
+      </view>
+
+      <view class="cq li">
+        <view class="main-left">
+          <image src="/images/match/cq.png"></image>
+          <text>比赛场区：</text>
+        </view>
+        <view class="main-right">
+          XXX
+        </view>
+      </view>
+
+    </view>
+
+    <view class="ewm"></view>
+
+  </view>
+
+  <!-- 支付信息 -->
+  <view class="pay-msg">
+
+    <view class="pay-msg-tittle">
+      <text>支付信息</text>
+    </view>
+
+    <view class="pay-msg-main">
+
+      <view class="pay-money">
+        <text>支付金额：</text>
+        <view>XXX</view>
+      </view>
+
+      <view class="pay-num">
+        <text>支付金额：</text>
+        <view>XXX</view>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>

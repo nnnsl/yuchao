@@ -1,0 +1,37 @@
+/* pages/bs-Order/index.wxss */
+/* pages/cg-Order/index.wxss */
+
+page, .bs-Order {
+  height: 100%;
+  background-color: #333333;
+}
+
+.bs-details {
+  width: 716rpx;
+  height: 140rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 14rpx;
+  margin: 10rpx auto;
+  display: flex;
+}
+
+.bs-details-l {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  box-sizing: border-box;
+  padding: 10rpx 0 10rpx 16rpx;
+  
+}
+
+.bs-details-r {
+  width: 20%;
+  height: 100%;
+  background-color: #3FB8EF;
+  border-radius: 0 14rpx 14rpx 0;
+}

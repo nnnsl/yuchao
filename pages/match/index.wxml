@@ -1,0 +1,47 @@
+<!--pages/match/index.wxml-->
+<view scroll-y style="height: 100%;" class="match">
+<van-dialog id="van-dialog" />
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+  <view class="head">
+    <image src="/images/match/match-logo.png"></image>
+  </view>
+
+  <view class="middle-content">
+    <!-- 个人赛 -->
+    <view class="grs logo" bindtap="show_grs">
+      <view class="text-box">
+        <image src="/images/match/grs-logo.png"></image>
+        <text>个人赛</text>
+      </view>
+      <image src="/images/match/grs.png"></image>
+    </view>
+    <!-- 团体赛 -->
+    <view class="tts logo" bindtap='team_game'>
+      <view class="text-box2">
+        <image src="/images/match/tts-logo.png"></image>
+        <text>团体赛</text>
+      </view>
+      <image src="/images/match/tts.png"></image>
+    </view>
+    <!-- 弹窗 -->
+    <show_dialog id='showModal' title='团体赛只有团长才能申请哦！可以联系你的团长进行申请~' bind:error='no' bind:success="yes">
+    </show_dialog>
+  </view>
+
+  <!-- 比赛审核状态 -->
+  <view class="bs-state">
+    <view class="bs-state-tittle">
+      <view>比赛时间</view>
+      <view>比赛场地</view>
+      <view>状态</view>
+    </view>
+
+    <view class="bs-state-li" wx:for="{{gamerecordArr}}" wx:key="index">
+      <view class="bs-state-li-left">{{item.gameTime}}</view>
+      <view class="bs-state-li-middle">{{item.venueName}}</view>
+      <view class="bs-state-li-right">{{item.status==1?'未开始':'已结束'}}</view>
+    </view>
+
+  </view>
+
+</view>

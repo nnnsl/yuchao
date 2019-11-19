@@ -1,0 +1,273 @@
+/* pages/one_match/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #333333;
+}
+
+.one-match {
+  height: 100%;
+  overflow: hidden;
+}
+/* 比赛信息 */
+.msg {
+  width: 716rpx;
+  height: 256rpx;
+  background: #434343;
+  border-radius: 14rpx;
+  margin: 30rpx auto;
+}
+
+.msg-box-top, .money-box-top {
+  height: 90rpx;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.2);
+  line-height: 90rpx;
+}
+
+.msg-box-top text, .money-box-top text {
+  font-size: 28rpx;
+  color: #ffffff;
+  margin-left: 30rpx;
+  letter-spacing: 4rpx;
+}
+
+.msg-box-down, .money-box-down {
+  width: 100%;
+  height: 164rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.changg, .time {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.cg-Right,.time-Right{
+  display: flex;
+  align-items: center;
+}
+
+.yjt {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 14rpx;
+}
+
+.msg-box-down text, .money-box-down {
+  color: #999999;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 148rpx;
+  box-sizing: border-box;
+  padding: 24rpx 0;
+}
+
+.radio-group radio {
+  margin-left: 26rpx;
+}
+radio .wx-radio-input{
+   border-radius: 10rpx;
+   width: 26rpx;
+   height: 26rpx;
+   background: #434343;
+}
+
+radio .wx-radio-input.wx-radio-input-checked{
+    border-color:#FFC000 !important;
+    background:#FFC000 !important;
+}
+
+
+.explain {
+  width: 600rpx;
+  height: 90rpx;
+  color: #c4a034;
+  font-size: 22rpx;
+  font-weight: bold;
+  margin: 0 0 20rpx 40rpx;
+}
+
+.explain view {
+  line-height: 40rpx;
+}
+
+.xieyi, .xieyi-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xieyi {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #ffc000;
+  position: relative;
+}
+
+.xieyi-check {
+  color: #fff;
+  margin-right: 30rpx;
+  letter-spacing: 4rpx;
+}
+
+.checkBox {
+  position: absolute;
+  margin-left: -130rpx;
+}
+
+.sure-pay, .sure-pay image, .pay-btn {
+  width: 334rpx;
+  height: 100rpx;
+}
+
+.sure-pay {
+  position: relative;
+  margin: 40% auto 0;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.sure-pay .pay-btn {
+  position: absolute;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: rgba(195, 109, 22, 1);
+}
+
+/* 弹窗遮罩 */
+
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+
+.shade_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 11;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  animation-name: popup;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* 当前弹窗样式 */
+
+.popup {
+  width: 456rpx;
+  height: 552rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 14rpx;
+}
+
+.shade-tittle {
+  height: 86rpx;
+  width: 456rpx;
+  position: relative;
+}
+
+.shade-tittle image {
+  height: 86rpx;
+  width: 456rpx;
+}
+
+.txt {
+  position: absolute;
+  height: 86rpx;
+  width: 456rpx;
+  font-size: 28rpx;
+  text-align: center;
+  font-weight: bold;
+  line-height: 86rpx;
+  color: rgba(255, 255, 255, 1);
+}
+
+.shade-main .li {
+  height: 80rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.li text {
+  margin-left: 26rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+}
+
+.li view {
+  margin-left: 24rpx;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.pay-box, .pay-box image, .pay-txt {
+  width: 350rpx;
+  height: 82rpx;
+}
+
+.pay-box {
+  position: relative;
+  margin: 34rpx auto 0;
+}
+
+.pay-txt {
+  position: absolute;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: rgba(195, 109, 22, 1);
+  line-height: 82rpx;
+  text-align: center;
+}
+.queding{
+  text-align: right;
+  margin-right: 60rpx;
+  margin-top:30rpx
+}
+
+.quxiao{
+  margin-left: 60rpx;
+  margin-top:30rpx
+}

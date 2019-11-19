@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-datetime-picker": "/dist/datetime-picker/index",
+    "van-popup": "/dist/popup/index",
+    "van-checkbox": "/dist/checkbox/index",
+    "van-checkbox-group": "/dist/checkbox-group/index",
+    "van-picker": "/dist/picker/index",
+    "van-notify": "/dist/notify/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-dialog": "/dist/dialog/index"
+  },
+    "navigationBarTitleText": "个人赛报名",
+    "navigationBarBackgroundColor": "#FFC000"
+}

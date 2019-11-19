@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabbar": "/component/custom-tabbar/tabbar"
+  },
+  "navigationBarTitleText": "预定",
+  "navigationBarBackgroundColor": "#FFC000"
+}

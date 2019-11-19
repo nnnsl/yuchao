@@ -1,0 +1,9 @@
+{
+"usingComponents": {
+  "tabbar": "/component/custom-tabbar/tabbar",
+  "show_dialog": "/component/custom-dialog/index",
+  "van-dialog": "/dist/dialog/index"
+},
+"navigationBarTitleText": "比赛",
+"navigationBarBackgroundColor": "#FFC000"
+}

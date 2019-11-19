@@ -1,0 +1,112 @@
+/* pages/member-list/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #333333;
+}
+
+.serch-box {
+  width: 714rpx;
+  height: 68rpx;
+  background: rgba(211, 211, 211, 1);
+  border-radius: 34px;
+  margin: 40rpx auto 36rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: normal;
+  color: rgba(87, 87, 87, 1);
+  line-height: 10px;
+}
+
+.serch-box image {
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 34rpx;
+}
+.serch-box input{
+  width: 600rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+/* pages/total-rankings/index.wxss */
+
+page {
+  height: 100%;
+  background: #333;
+}
+
+.total-rankings-self, .li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}
+
+.total-rankings-self {
+  height: 160rpx;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  bottom: 0;
+  border-radius: 16rpx 16rpx 0 0;
+}
+
+.total-rankings-all {
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.1);
+  width: 90%;
+  margin: 0 auto 8rpx;
+  height: 1800rpx;
+  color: #fff;
+}
+
+#selfPic {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+}
+
+.index {
+  height: 30px;
+  width: 30px;
+  background-color: #ffc000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px #888;
+}
+
+.nickName {
+  /* margin-bottom: 14rpx; */
+}
+
+.province {
+  font-size: 25rpx;
+}
+
+.li {
+  height: 160rpx;
+}
+
+.middle {
+  margin-right: 50rpx;
+  align-items: center;
+}
+
+.middle .txt {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(208, 140, 78, 1);
+  margin-bottom: 12rpx;
+}
+
+.middle image {
+  width: 134rpx;
+  height: 44rpx;
+}

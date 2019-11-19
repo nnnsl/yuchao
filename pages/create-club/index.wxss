@@ -1,0 +1,131 @@
+/* pages/creat-club/index.wxss */
+
+page, .creat-club {
+  background-color: #333;
+  height: 100%;
+  overflow: auto;
+}
+
+.club-name {
+  height: 200rpx;
+}
+
+#tittle {
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin: 20rpx 0 30rpx 30rpx;
+  letter-spacing: 2rpx;
+}
+
+.serch-box {
+  width: 716rpx;
+  height: 80rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 40rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+}
+
+.serch-box input {
+  height: 100%;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  font-weight: 800;
+  color: rgba(221, 221, 221, 1);
+}
+
+#msg {
+  display: inline-block;
+  font-size: 20rpx;
+  font-weight: 800;
+  color: rgba(153, 153, 153, 1);
+  margin-left: 20rpx;
+}
+
+.club-about {
+  margin-top: 30rpx;
+}
+
+.upload, .upload image {
+  width: 138rpx;
+  height: 138rpx;
+  margin-right: 20rpx;
+}
+
+.upload {
+  margin: 0 0 10rpx 30rpx;
+  border: 2rpx dashed rgba(255, 255, 255, 0.5);
+}
+
+.upload-box {
+  display: flex;
+  width: 380rpx;
+  justify-content: space-between;
+}
+
+/* 联动 */
+
+.select {
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: 800;
+  color: rgba(221, 221, 221, 1);
+}
+
+.li {
+  width: 200rpx;
+  height: 80rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 40rpx;
+  margin: 0 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.down-msg {
+  display: inline-block;
+  font-size: 20rpx;
+  font-weight: 800;
+  color: rgba(153, 153, 153, 1);
+  margin: 20rpx 0 0 20rpx;
+}
+
+.create-btn, .create-btn image {
+  width: 270rpx;
+  height: 80rpx;
+}
+
+.create-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 70rpx;
+}
+
+/* .create-btn:active {
+  background: olive;
+} */
+
+.create-btn text {
+  position: absolute;
+  font-size: 26rpx;
+  font-weight: 800;
+  color: rgba(195, 109, 22, 1);
+}
+
+.shi image {
+  width: 24rpx;
+  height: 12rpx;
+  margin-left: 18rpx;
+}

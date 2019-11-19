@@ -1,0 +1,50 @@
+<!--pages/reserve/index.wxml-->
+<view scroll-y style="height: 100%;" class="reserve">
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+
+  <view class="head">
+    <image src="/images/match/match-logo.png"></image>
+  </view>
+
+
+  <!-- 推荐场馆 -->
+
+  <view class="tj-tittle">推荐场馆</view>
+
+  <view class="tj-content" wx:for="{{venueList}}" wx:key="{{index}}" bindtap="cg_details" id="{{item.id}}" data-name="{{item.venueName}}">
+
+    <view class="tj-pic">
+      <image src="{{item.venueImg?item.venueImg:defaultImg}}" lazy-load="true" alt="/images/reserve/renue.jpg"></image>
+    </view>
+
+    <view class="tj-msg">
+
+      <view class="tj-msg-tittle">{{item.venueName}}</view>
+
+      <view class="tj-msg-price">
+        <view>均价：
+          <text>{{item.avePrice}}</text>
+        </view>
+      </view>
+
+      <view class="tj-msg-address">
+        <view>地址：
+          <text>{{item.venueAddress}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="tj-msg-score">
+      <view>距离：
+        <text>{{item.distance / 1000}}km</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+</view>
+
+
++

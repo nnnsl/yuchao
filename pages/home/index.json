@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabbar": "/component/custom-tabbar/tabbar",
+    "van-dialog": "/dist/dialog/index"
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#FFC000"
+}

@@ -1,0 +1,77 @@
+<!--pages/creat-club/index.wxml-->
+<view class="creat-club">
+  <van-toast id="van-toast" />
+  <van-notify id="van-notify" />
+  <van-dialog id="van-dialog" />
+  <!-- 俱乐部名称 -->
+  <view class="club-name">
+    <text id="tittle">俱乐部名称</text>
+    <view class="serch-box">
+      <input placeholder="请输入名称" name="inputName" bindinput="clubNameInput"></input>
+    </view>
+    <text id="msg">提示：一旦上传不可二次修改</text>
+  </view>
+
+  <!-- 俱乐部简介 -->
+  <view class="club-about">
+    <text id="tittle">俱乐部简介</text>
+    <view class="serch-box">
+      <input placeholder="请输入文字" name="inputAbout" bindinput="clubAboutInput"></input>
+    </view>
+  </view>
+
+  <!-- 俱乐部Logo -->
+  <view class="club-about">
+    <text id="tittle">俱乐部Logo</text>
+    <view class="upload-box">
+      <view class="upload" bindtap="uploadimg">
+        <image src="{{source==''?'/images/club/jia.png':source}}"></image>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 俱乐部区域 -->
+  <view class="club-area">
+    <text id="tittle">俱乐部区域</text>
+
+  </view>
+
+  <!-- 联动 -->
+  <view class="select">
+
+    <view class="shi li" bindtap="changeShow">
+      <text>{{country}}</text>
+    </view>
+
+    <view class="qu li" bindtap="changeShow2">
+      <text>{{city}}</text>
+    </view>
+
+    <!-- 省外层弹窗 -->
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom" overlay="{{ true }}">
+      <!-- 内层选择器 -->
+      <van-picker show-toolbar title="选择省份" columns="{{ columns }}" bind:cancel="onCancel" bind:confirm="onConfirm" />
+    </van-popup>
+
+    <!-- 市外层弹窗 -->
+    <van-popup show="{{ show2 }}" bind:close="onClose2" position="bottom">
+      <!-- 内层选择器 -->
+      <van-picker show-toolbar title="选择城市" columns="{{ columns2 }}" bind:cancel="onCancel2" bind:confirm="onConfirm2" />
+    </van-popup>
+
+  </view>
+
+  <view class="down-msg">
+    <text>提示：创建成功后团员需要满足：两男一女（包含本人）方可报名团体赛</text>
+  </view>
+
+
+  <!-- 确认创建 -->
+  <view class="create-btn" bindtap="create_club">
+    <text>确定创建</text>
+    <image src="/images/club/found.png"></image>
+  </view>
+
+
+</view>

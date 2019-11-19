@@ -1,0 +1,8 @@
+<!--pages/record-list/index.wxml-->
+<view class="member-list">
+
+  <view class="serch-box">
+    <image src="/images/club/serch.png"></image>
+    <input placeholder="输入成员姓名"></input>
+  </view>
+</view>

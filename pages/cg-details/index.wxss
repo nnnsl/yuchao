@@ -1,7 +1,7 @@
 /* pages/cg-details/index.wxss */
 
 page, .cg-details {
-  /* background-color: #333; */
+  background-color: #333;
 }
 
 .cg-details {
@@ -45,84 +45,36 @@ page, .cg-details {
 /* 可选/已售 */
 
 .choose-date {
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 8px 2px rgba(51, 51, 51, 0.1);
-  border-radius: 7px 7px 0px 0px;
-  width: 720rpx;
-  margin: 20rpx auto 20rpx;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 线条 */
-
-.line {
-  width: 100%;
-  height: 1px;
-  background-color: #eee;
-  margin-top: 1px;
+  width: 660rpx;
+  margin: 32rpx auto 68rpx;
 }
 
 .choose-tittle {
   font-size: 22rpx;
   font-weight: 800;
-  line-height: 60rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.outline {
-  background: rgba(125, 125, 125, 1);
-  border-radius: 3px;
-  width: 28rpx;
-  height: 28rpx;
-}
-
-.online {
-  background: rgba(255, 192, 0, 1);
-  border-radius: 3px;
-  width: 28rpx;
-  height: 28rpx;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 36rpx;
 }
 
 .date-main {
-  margin-top: 20rpx;
   display: flex;
-  padding: 20rpx;
   justify-content: space-around;
 }
 
-.date-li {
-  width: 58rpx;
-  height: 58rpx;
-  border-radius: 50rpx;
+.date-li, .choosed-li {
+  width: 80rpx;
+  height: 130rpx;
+  border-radius: 6rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 28rpx;
-  color: #999;
-}
-
-.choosed-li {
-  width: 58rpx;
-  height: 58rpx;
-  border-radius: 50rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 28rpx;
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .date-li {
-  background: #eee;
+  background: rgba(119, 118, 118, 1);
 }
 
 .choosed-li {
@@ -136,31 +88,13 @@ page, .cg-details {
   margin-bottom: 8rpx;
 }
 
-.time {
-  width: 80rpx;
-  height: 42rpx;
-  background: rgba(112, 112, 112, 1);
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-  font-family: Adobe Heiti Std;
-  font-weight: normal;
-}
-
 /* 选择时间场次 */
 
 .choose-state {
   width: 52%;
+  margin: 0 auto 32rpx;
   display: flex;
-  padding: 40rpx;
-  padding-bottom: 20rpx;
-  font-size: 13px;
-  font-family: Adobe Heiti Std;
-  font-weight: normal;
-  color: rgba(51, 51, 51, 1);
+  justify-content: space-around;
 }
 
 .li {
@@ -186,121 +120,120 @@ page, .cg-details {
 }
 
 .choose-main {
-  width: 720rpx;
+  width: auto;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 7px 0px rgba(51, 51, 51, 0.3);
-  border-radius: 0px 0px 7px 7px;
+  padding: 0rpx 15rpx;
 }
 
 .choose-top {
-  width: 720rpx;
-  height: 67rpx;
-  /* background: rgba(83, 83, 83, 1); *//* border-radius: 14rpx; */
+  width: 726rpx;
+  height: 46rpx;
+  background: rgba(83, 83, 83, 1);
+  border-radius: 14rpx;
   display: flex;
   overflow: hidden;
-  /* margin-bottom: 26rpx; */
+  margin-bottom: 26rpx;
 }
 
 .choose-top-left {
-  width: 210rpx;
-  /* background: rgba(255, 255, 255, 1); *//* border-radius: 14px; */
-  font-size: 22rpx;
-  text-align: center;
   font-weight: bold;
-  color: rgba(51, 51, 51, 1);
+  width: 164rpx;
+  height: 46rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 14rpx;
+  margin-bottom: 24rpx;
+  font-size: 22rpx;
   line-height: 46rpx;
-  border: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .choose-top-right {
-  width: 510rpx;
+  width: 384px;
+  height: 48rpx;
+  /* overflow-x: scroll; */
+  margin-left: 20rpx;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .right-li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120rpx;
   text-align: center;
-  font-size: 10px;
-  font-family: PingFang SC;
+  font-size: 22rpx;
   font-weight: bold;
-  color: rgba(51, 51, 51, 1);
-  /* color: rgba(255, 255, 255, 1); */
+  color: rgba(255, 255, 255, 1);
   box-sizing: border-box;
-  /* padding-left: 8rpx; */
+  padding-left: 0rpx;
+  width: 54rpx;
   height: 100%;
-  border: 1px solid #e5e5e5;
-  border-left: 0;
+  margin-bottom: 27rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10rpx;
 }
 
 .choose-body {
-  width: 100%;
+  width: auto;
   display: flex;
 }
 
 .choose-body-left {
-  /* width: 180rpx; */
+  width: auto;
 }
 
 .choose-body-left-li {
-  height: 66rpx;
-  width: 206rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  font-family: PingFang SC;
-  font-weight: bold;
-  color: rgba(51, 51, 51, 1);
-  line-height: 12px;
-  /* background: rgba(83, 83, 83, 1); *//* border-radius: 14rpx; *//* margin-bottom: 24rpx; *//* color: rgba(255, 255, 255, 1); */
-  border: 1px solid #e5e5e5;
-  border-top: 0;
+  width: 164rpx;
+  height: 46rpx;
+  background: rgba(83, 83, 83, 1);
+  border-radius: 14rpx;
+  margin-bottom: 24rpx;
+  font-size: 22rpx;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+  line-height: 46rpx;
+  text-align: center;
 }
 
 .choose-body-right {
-  width: 511rpx;
-  height: 885rpx;
-  /* margin-left: 20rpx; */
+  width: auto;
+  height: 955rpx;
+  margin-left: 20rpx;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
 }
 
 /* 右边座位 */
 
 .choose-body-right-column {
-  width: 140rpx;
+  width: 70rpx;
   height: 100%;
-  /* margin-bottom: 27rpx; */
+  margin-bottom: 27rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 1px solid #e5e5e5;
+  margin-right: 10rpx;
 }
 
 .site-li, .site-choose {
   text-align: center;
-  /* color: white; */
+  color: white;
   font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 79rpx;
-  /* border-radius: 14rpx 14rpx 4rpx 4rpx; *//* border-right:1px solid #E5E5E5; */
-  border-bottom: 1px solid #e5e5e5;
+  width: 54rpx;
+  height: 46rpx;
+  border-radius: 14rpx 14rpx 4rpx 4rpx;
 }
 
 .site-li {
-  background: #fff;
+  background: rgba(83, 83, 83, 1);
 }
 
 .site-li2 {
-  background: #7d7d7d;
+  background: #fff;
 }
 
 .site-choose {
@@ -346,7 +279,7 @@ page, .cg-details {
 .submit-left2 {
   height: 100%;
   width: 60%;
-  margin-left: 30rpx;
+  /* margin-left: 30rpx; */
 }
 
 .choosed2 {
@@ -355,7 +288,7 @@ page, .cg-details {
 }
 
 .choosed-list2 {
-  width: 400rpx;
+  width: 425rpx;
   height: 38rpx;
   display: flex;
   font-size: 24rpx;

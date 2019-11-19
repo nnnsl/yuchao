@@ -1,0 +1,22 @@
+<!--pages/bs-Order/index.wxml-->
+
+<view class="bs-Order">
+  <view class="bs-details" bindtap="bs_Order_details" wx:for="{{dataList}}" wx:key="index">
+
+    <view class="bs-details-l">
+
+      <view>比赛时间:　{{item.createTime}}</view>
+      <view>比赛场地:　{{item.venueName}}</view>
+      <view>使用时间:　{{item.useTime}}</view>
+      <view>状态:　{{item.status==1?'未开始':'已结束'}}</view>
+
+    </view>
+
+    <view class="bs-details-r">
+
+    </view>
+
+  </view>
+
+
+</view>

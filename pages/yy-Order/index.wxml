@@ -1,0 +1,63 @@
+<!--pages/yy-Order/index.wxml-->
+<view class="yy-Order">
+
+<view class="bs-msg">
+
+<view class="msg-tittle"><text>比赛信息</text></view>
+
+<view class="msg-main">
+
+  <view class="name li">
+  <text>姓名：</text>
+XXX
+  </view>
+
+  <view class="time li">
+  <text>预约时间：</text>
+XXX
+  </view>
+
+<view class="cg-name li">
+  <text>场馆名称：</text>
+XXX
+  </view>
+
+  <view class="cg-address li">
+  <text>场馆位置：</text>
+XXX
+  </view>
+
+  <view class="cq li">
+  <text>预约场区：</text>
+XXX
+  </view>
+
+</view>
+
+<view class="erwm">
+二维码
+</view>
+
+</view>
+
+
+<view class="pay-msg">
+
+<view class="pay-title">支付信息</view>
+
+<view class="pay-main">
+<view class="amount  pay-li">
+<text>金额：</text>
+XXX
+</view>
+
+<view class="pay-num pay-li">
+<text>支付流水号：</text>
+XXXXXX
+</view>
+
+</view>
+
+</view>
+
+</view>

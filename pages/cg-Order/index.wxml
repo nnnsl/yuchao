@@ -1,0 +1,20 @@
+<!--pages/cg-Order/index.wxml-->
+<view class="cg-Order">
+  <view class="cg-details" bindtap="open_yydd" wx:for="{{dataList}}" wx:key="index">
+
+    <view class="cg-details-l">
+
+      <view>场馆名称:　{{item.venueName}}</view>
+      <view>场地名称:　{{item.siteName}}</view>
+      <view>预定时间:　{{item.createTime}}</view>
+      <view>使用时间:　{{item.useTime}}</view>
+
+    </view>
+
+    <view class="cg-details-r">
+
+    </view>
+
+  </view>
+
+</view>

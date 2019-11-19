@@ -1,0 +1,131 @@
+/**index.wxss**/
+
+page, .home {
+  height: 100%;
+  background-color: #333;
+}
+
+.home {
+  padding: 40rpx 0 140rpx;
+}
+
+/* 背景阴影 */
+
+.bg-shadow {
+  width: 100%;
+  height: 734rpx;
+}
+
+#bg {
+  width: 100%;
+  height: 737rpx;
+  display: block;
+}
+
+.bg-shadow {
+  position: relative;
+}
+
+/* 椭圆 */
+
+.ty {
+  position: absolute;
+  left: 40rpx;
+  top: 116rpx;
+}
+
+.ty, .ty image {
+  width: 570rpx;
+  height: 570rpx;
+}
+
+/* 人 */
+
+.guy {
+  position: absolute;
+  left: 150rpx;
+  top: 240rpx;
+}
+
+.guy, .guy image {
+  width: 320rpx;
+  height: 500rpx;
+}
+
+/* 战绩 */
+
+.result {
+  width: 100%;
+  height: 600rpx;
+  background: #fbca8a;
+  box-sizing: border-box;
+  padding: 80rpx 70rpx 0;
+}
+
+.li-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 36rpx;
+}
+
+.li, .li image {
+  width: 280rpx;
+  height: 54rpx;
+}
+
+.li {
+  position: relative;
+  
+}
+
+
+.txt {
+  position: absolute;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: rgba(140, 151, 203, 1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 胜率 */
+
+.shenglv {
+  width: 604rpx;
+  height: 54rpx;
+}
+
+.shenglv image {
+  width: 100%;
+  height: 100%;
+}
+
+.shenglv {
+  margin: 0 auto;
+}
+
+/* 更多 */
+
+.show-more {
+  width: 340rpx;
+  height: 40rpx;
+  margin: 70rpx auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more image {
+  width: 50rpx;
+  height: 20rpx;
+  margin-right: 24rpx;
+}
+
+.show-more text {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}

@@ -1,0 +1,139 @@
+<!--pages/club/index.wxml-->
+
+<view class="allView" style="overflow-y: auto;">
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+  <!-- 未加入 -->
+  <view class="club" wx:if="{{joinStateus==0}}">
+    <view class="club-main">
+      <view class="found-logo" bindtap="create_club">
+        <view class="found-text">
+          <image src="/images/club/found-logo.png"></image>
+          <text>创建俱乐部</text>
+        </view>
+        <image src="/images/club/yjjx.png"></image>
+      </view>
+
+      <view class="join-logo" bindtap="join_club">
+        <view class="join-text">
+          <image src="/images/club/join-logo.png"></image>
+          <text>加入俱乐部</text>
+
+        </view>
+        <image src="/images/club/yjjx.png"></image>
+      </view>
+    </view>
+
+    <image src="/images/club/club-bg.png" id="club-bg"></image>
+  </view>
+
+
+  <!-- 已加入 -->
+
+
+  <view class="my-club" wx:else>
+    <!-- 俱乐部信息 -->
+    <view class="club-msg">
+      <view class="club-msg-name">
+        <view class="guy-pic">
+          <image src="{{clubMsg.avatarUrl}}" style="width:100%;"></image>
+        </view>
+        <view class="club-msg-text">
+          <view class="club-title">{{club_meg.clubName}}</view>
+          <view class="msg">
+            <text>地区:</text>
+            <text>{{club_meg.clubArea}}</text>
+            <text>{{club_meg.clubCity}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="club-daunWei">
+        <text>简介：</text>
+        <text>{{club_meg.clubDesc}}</text>
+      </view>
+    </view>
+
+    <!-- 俱乐部成员 -->
+    <view class="club-all" bindtap="member_list">
+      <view class="club-all-title">
+        <view>俱乐部成员</view>
+        <view class="guy-num">
+          <text>共</text>{{clubMsg[1].length}}
+          <text>人</text>
+          <image src="/images/match/yjt.png"></image>
+        </view>
+      </view>
+      <view class="all-box">
+
+        <view class="man">
+          <view class="man-bg">
+            <image src="/images/club/man-symbol.png"></image>
+          </view>
+          <view style="height: 100%;width: 75%;display:flex;float: right;">
+            <view wx:for="{{clubMsg[1]}}" wx:kry="index" style="width:125rpx;height:125rpx;">
+              <image src="{{item.avatarUrl}}" style="width:100%;height:100%;position: relative;z-index: 11;"></image>
+            </view>
+          </view>
+          <image src="/images/club/man.png" id="man"></image>
+        </view>
+
+        <view class="woman">
+          <view class="woman-bg">
+            <image src="/images/club/woman-symbol.png"></image>
+          </view>
+          <image src="/images/club/woman.png" id="woman"></image>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 比赛 -->
+    <view class="bisai-title" bindtap="record_list">
+      <text>比赛</text>
+      <image src="/images/match/yjt.png"></image>
+    </view>
+
+    <view class="cg-content" wx:for="{{clubMsg[2]}}" wx:key="index">
+      <view class="cg-left" wx:if="{{clubMsg[2] != '' ||clubMsg[3] != null}}">
+        <view class="li">
+          比赛场馆：{{item.venueName}}
+        </view>
+        <view class="li">
+          比赛时间：{{item.gameTime}}
+        </view>
+        <view class="li">
+          比赛地点：{{item.venueAddress}}
+        </view>
+      </view>
+      <view class="cg-left" wx:else>
+        <view class="li">
+          未参加比赛
+        </view>
+      </view>
+
+      <view class="cg-right">
+        <view class="txt">比赛结果</view>
+        <view wx:if="{{clubMsg[2] != '' ||clubMsg[3] != null}}">XXX</view>
+        <view wx:else>--</view>
+      </view>
+    </view>
+
+    <!-- 战绩 -->
+    <view class="zhanji-main">
+      <view class="zj-left">
+        <image src="/images/club/jb.png"></image>
+        <view class="zhanji-text">
+          <text id="zhanji">战绩:</text>
+          <text id="shenglv">胜率:</text>
+        </view>
+      </view>
+
+      <view class="zhanji-num">
+        <text id="all-num">共XXXX场</text>
+        <text id="bfb">XXX</text>
+      </view>
+
+    </view>
+
+  </view>
+</view>

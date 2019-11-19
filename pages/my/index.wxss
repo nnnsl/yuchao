@@ -1,0 +1,240 @@
+page, .my {
+  height: 100%;
+  background-color: #333;
+  overflow: auto;
+}
+
+.my {
+  padding-bottom: 230rpx;
+}
+.header{
+  width: 100%;
+  height: 640rpx;
+  position: relative;
+}
+.my-msg {
+  width: 750rpx;
+  height: 338rpx;
+}
+
+.msg-tittle {
+  position: absolute;
+  top: 60rpx;
+  left: 48rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.my-msg image {
+  width: 100%;
+  height: 100%;
+}
+
+.msg-head {
+  width: 560rpx;
+  height: 116rpx;
+  display: flex;
+}
+
+.userinfo {
+  position: absolute;
+  top: 160rpx;
+  left: 38rpx;
+  height: 474rpx;
+  width: 676rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 34rpx;
+  box-sizing: border-box;
+  padding: 56rpx;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  margin-right: 34rpx;
+}
+
+.middle, .user-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middle {
+  margin-right: 50rpx;
+  align-items: center;
+}
+
+.user-main {
+  align-items: flex-start;
+}
+
+.middle .txt {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(208, 140, 78, 1);
+  margin-bottom: 12rpx;
+}
+
+.middle image {
+  width: 134rpx;
+  height: 44rpx;
+}
+
+.win-num {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  width:190rpx;
+}
+
+.win,.all-num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduce {
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.2);
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  box-sizing: border-box;
+  padding-bottom: 34rpx;
+  margin: 30rpx 0 60rpx;
+}
+
+#username {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 16rpx;
+}
+
+/* 金币等 */
+
+.head-bottom image {
+  width: 68rpx;
+  height: 68rpx;
+  margin-right: 10rpx;
+}
+
+.li {
+  display: flex;
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.txt-t {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  margin-bottom: 10rpx;
+}
+
+.txt-num {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.head-bottom {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 我的订单 */
+
+.dingdan-content {
+  margin: 48rpx auto 10rpx;
+  width: 86%;
+  height: 240rpx;
+}
+
+.dingdan-tittle {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 46rpx;
+}
+
+.order-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cg-order image, .bs-order image {
+  width: 308rpx;
+  height: 90rpx;
+}
+
+.cg-order, .bs-order {
+  position: relative;
+}
+
+.order-txt {
+  position: absolute;
+  top: 30rpx;
+  left: 142rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.form-main {
+  width: 88%;
+  height: 372rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 34rpx;
+  margin:0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+   box-sizing: border-box;
+  padding: 0 18rpx;
+}
+
+.form-main .li{
+  height: 20%;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+  color: rgba(85, 85, 85, 1);
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+  font-weight: bold;
+  padding-left: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right,.right image{
+  width: 10rpx;
+  height: 18rpx;
+ 
+}
+.right{
+ margin-right: 60rpx;
+}
+
+.form-main .left image {
+  width: 24rpx;
+  height: 26rpx;
+  float: left;
+  margin-right: 30rpx;
+  color: rgba(85, 85, 85, 1);
+}
+
+.about {
+  border: none !important;
+}

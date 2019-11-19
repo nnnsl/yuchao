@@ -1,0 +1,158 @@
+<!--pages/one_match/index.wxml-->
+<view class="one-match">
+  <van-notify id="van-notify" />
+  <van-dialog id="van-dialog" />
+  <!-- 比赛信息 -->
+  <view class="msg-box msg">
+    <view class="msg-box-top">
+      <text>比赛信息</text>
+    </view>
+
+    <view class="msg-box-down">
+      <!-- 选择场馆 -->
+      <view class="changg" bindtap="popupShow">
+        <text>场馆：</text>
+        <view class="cg-Right">
+          <view>{{cgName}}</view>
+          <image src="/images/match/yjt.png" class="yjt" style="margin-left:20rpx"></image>
+        </view>
+      </view>
+
+      <!-- 选择日期 -->
+      <view class="time" bindtap="popupShow2">
+        <text>时间：</text>
+        <view class="time-Right">
+          <view>{{timeShow}}</view>
+          <image src="/images/match/yjt.png" class="yjt"></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 弹框包裹场馆框 -->
+  <van-popup show="{{ popupShow }}" bind:close="onPoputClose" position="bottom">
+    <!-- 场馆选项 -->
+    <van-picker show-toolbar columns="{{ columns }}" bind:confirm="onConfirm" bind:cancel="onCancel" />
+  </van-popup>
+
+
+  <!-- 弹出框包裹时间框 -->
+  <van-popup show="{{ popupShow2 }}" bind:close="onPoputClose2" position="bottom">
+    <!-- 时间框 -->
+    <!-- <van-picker show-toolbar columns="{{ columns2 }}" bind:confirm="onConfirm" bind:cancel="onConfirm" /> -->
+    <view>
+      <van-row>
+        <!-- <view>{{year}}年{{month}}月{{day}}日{{time_sxw}}</view> -->
+        <van-col span="12">
+          <view class="quxiao" bindtap="popupShow4">取消</view>
+        </van-col>
+        <van-col span="12">
+          <view class="queding" bindtap="popupShow3">确定</view>
+        </van-col>
+      </van-row>
+      <!-- <button bindtap="popupShow3">确定</button> -->
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+        <picker-view-column style="text-align: center;">
+          <view wx:for="{{years}}" wx:key="index" style="line-height: 50px">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column style="text-align: center;">
+          <view wx:for="{{months}}" wx:key="index" style="line-height: 50px">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column style="text-align: center;">
+          <view wx:for="{{days}}" wx:key="index" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+        <picker-view-column style="text-align: center;">
+          <view wx:for="{{time_sxws}}" wx:key="index" style="line-height: 50px">{{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </van-popup>
+
+  <!-- 金额 -->
+  <view class="money-box msg">
+    <view class="money-box-top">
+      <text>金额</text>
+    </view>
+
+    <view class="money-box-down">
+      <!-- 支付单选 -->
+      <radio-group class="radio-group">
+        <label class="radio" wx:for="{{items}}" wx:key="text">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+
+    </view>
+
+  </view>
+
+  <!-- 说明+协议 -->
+  <view class="explain">
+    <view>
+      注意事项说明：</view>
+    <view>目前订单处于未匹配成功阶段，请您关注公众号的实时消息。
+    </view>
+  </view>
+
+  <view class="xieyi">
+    <view class="xieyi-check">
+      <!-- 复选 -->
+      <van-checkbox value="{{ checked }}" bind:change="onChange" checked-color="#FFC000" class="checkBox"></van-checkbox>
+
+      <text>同意参赛协议</text>
+    </view>
+    <text bindtap="showcsxy">点此查看参赛协议</text>
+  </view>
+
+  <!-- 支付订单弹框 -->
+
+  <!-- 弹窗遮罩层 -->
+  <view class='shade' hidden='{{popup}}' bindtap='hidePopup'></view>
+
+  <!-- 弹窗 -->
+  <view class='shade_box popup' hidden='{{popup}}'>
+
+    <view class="shade-tittle">
+      <view class="txt">支付订单</view>
+      <image src="/images/match/pay-bg1.png"></image>
+    </view>
+
+    <view class="shade-main">
+
+      <view class="cg li">
+        <text>场馆：  </text>
+        <view>{{cgName}}</view>
+      </view>
+
+      <view class="address li">
+        <text>地址：</text>
+        <view>{{currentColumn.venueAddress}}</view>
+      </view>
+
+      <view class="date li">
+        <text>时间：</text>
+        <view>{{timeShow}}</view>
+      </view>
+
+      <view class="cs li">
+        <text>金额：</text>
+        <view>{{currentColumn.avePrice}}</view>
+      </view>
+
+      <view class="pay-box">
+        <view class="pay-txt" bindtap="submit_record">确定支付</view>
+        <image src="/images/match/sure-pay.png"></image>
+      </view>
+
+    </view>
+
+  </view>
+
+  <!-- 底部确认按钮 -->
+  <view class="sure-pay" bindtap='showPopup'>
+    <view class="pay-btn">确认支付</view>
+    <image src="/images/match/sure-pay.png"></image>
+  </view>
+
+</view>

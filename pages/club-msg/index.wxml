@@ -1,0 +1,63 @@
+<!--pages/club-msg/index.wxml-->
+<view class="club-msg">
+
+    <!-- 俱乐部信息 -->
+  <view class="club-msg-head">
+    <view class="club-msg-name">
+      <view class="guy-pic">
+        
+      </view>
+      <view class="club-msg-text">
+        <view class="club-title">{{clubMsg.clubName}}</view>
+        <view class="msg">
+          <text>地区: </text>
+            <text>{{clubMsg.clubArea}}</text>
+            <text>{{clubMsg.clubCity}}</text>
+         
+        </view>
+      </view>
+    </view>
+
+    <view class="club-daunWei">
+      <text>简介:</text>
+        <text>{{clubMsg.clubDesc}}</text>
+      
+    </view>
+  </view>
+
+  <!-- 成员 -->
+  <view class="guy-list" bindtap="goMenmberList">
+    <view class="guy-list-left">
+    <view class="li">
+        <view class="iamge"></view>
+        <view>昵称</view>
+    </view>
+    </view>
+    <view class="guy-list-right">查看更多</view>
+  </view>
+
+   <!-- 战绩 -->
+  <view class="zhanji-main">
+    <view class="zj-left">
+      <image src="/images/club/jb.png"></image>
+      <view class="zhanji-text">
+        <text id="zhanji">战绩:</text>
+        <text id="shenglv">胜率:</text>
+      </view>
+    </view>
+
+    <view class="zhanji-num">
+      <text id="all-num">共XXXX场</text>
+      <text id="bfb">XXX</text>
+    </view>
+
+  </view>
+
+  <view class="create-btn" bindtap="apply_join" id="{{clubId}}">
+    <text>申请加入</text>
+    <image src="/images/club/found.png"></image>
+  </view>
+
+<van-dialog id="van-dialog" />
+  
+</view>

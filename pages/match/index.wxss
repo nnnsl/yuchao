@@ -1,0 +1,116 @@
+/* pages/match/index.wxss */
+
+page, .match {
+  background-color: #333;
+  height: 100%;
+}
+
+.match {
+  padding-bottom: 148rpx;
+}
+
+.head {
+  width: 750rpx;
+  height: 350rpx;
+  background: rgba(67, 67, 67, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head image {
+  width: 712rpx;
+  height: 184rpx;
+}
+
+.logo image {
+  width: 386rpx;
+  height: 188rpx;
+}
+
+.middle-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36rpx;
+}
+
+.grs, .tts {
+  width: 100%;
+  position: absolute;
+}
+.grs{
+  left: 40rpx;
+}
+.tts{
+  right: 40rpx;
+}
+
+.grs, .tts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.text-box, .text-box2 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.text-box image, .text-box2 image {
+  margin-right: 30rpx;
+}
+
+.text-box image {
+  width: 40rpx;
+  height: 44rpx;
+}
+
+.text-box2 image {
+  width: 52rpx;
+  height: 36rpx;
+}
+
+.logo {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 1px 3px rgba(5, 4, 0, 0.3);
+}
+
+/* 比赛审核状态 */
+
+.bs-state {
+  width: 712rpx;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.95);
+  border-radius: 14rpx;
+  margin: 40rpx auto 0;
+}
+
+.bs-state:last-child {
+  margin-bottom: 40rpx;
+}
+
+.bs-state-tittle {
+  height: 98rpx;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(255, 192, 0, 1);
+}
+.bs-state-li{
+  color: white;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -10,6 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    lb: '', //监听y轴移动距离
+    rb: '', //监听y轴移动距离
     indate: '', //预定的日期
     inmonth: '', //预定的日期
     h_true: true, //选择的场地显示隐藏
@@ -31,6 +33,8 @@ Page({
     totalMoney: 0,
     choosed: [], //已经被预定
     timeListItem: [],
+    venueImg: '',
+    defaultImg: '/images/reserve/venue.jpg',
     time: [{
         time: "10:00-11:00",
         id: 1
@@ -85,6 +89,18 @@ Page({
       },
     ]
   },
+  //滚动监听
+  test2(e) {
+    this.setData({
+      lb: e.detail.scrollLeft
+    });
+  },
+  //滚动监听
+  test(e) {
+    this.setData({
+      rb: e.detail.scrollLeft
+    });
+  },
   // 日期点击
   goIndex(e) {
     var that = this;
@@ -120,7 +136,6 @@ Page({
     var dateArr = that.data.dateArr;
     var index = that.data.idx;
     var date_data = dateArr[index]
-    console.log(date_data)
     // 设置选中的时间
 
     var nowYear = new Date().getFullYear();
@@ -153,7 +168,6 @@ Page({
 
   // 点击座位
   chooseArea(e) {
-    console.log(e)
     var me = this;
     // console.log(me.data.dataList);
     var cgid = e.currentTarget.dataset.cg; //场馆iddateArr
@@ -166,118 +180,107 @@ Page({
     // 是否不可选
     if (ischoose) {
       return;
-    } else {
-      Dialog.confirm({
-          title: '提醒',
-          message: '是否将其座位改为线下预定？',
-          asyncClose: true
-        })
-        .then(() => {
-          var year = new Date().getFullYear();
-          var month = new Date().getMonth() + 1;
-          var date = me.data.timeList.nowdate;
-          var data = this.data.dataList;
-          var useTime = year + '-' + month + '-' + date;
-          var week = me.data.nowday;
-          var obj = {
-            timeId: timeId,
-            areaId: areaId,
-            price: priceId,
-            day: me.data.indate,
-            inmonth: me.data.inmonth,
-            time: time_period
-          };
-          console.log(obj)
-          // 已选+可选
-          var isselect = me.data.areaOption[cgid - 1][timeId - 1].isselect;
-          var e_ischoose = me.data.areaOption[cgid - 1][timeId - 1].ischoose;
-          var value = 'areaOption[' + (cgid - 1) + '][' + (timeId - 1) + '].isselect';
-          var value2 = 'areaOption[' + (cgid - 1) + '][' + (timeId - 1) + '].ischoose';
-          var allRecord = me.data.dataList;
-          // 根据数组长度判断是否增减
-          // if (data.length < 4) {
-          // 改变选中状态
-          if (isselect) {
-            me.setData({
-              [value2]: false
-            });
-            allRecord.forEach(function(item, index) {
-              if (item.timeId == obj.timeId && item.areaId == obj.areaId) {
-                allRecord.splice(index, 1)
-              }
-            })
-            console.log(e, 11111111111)
-            Dialog.close();
-          } else {
-            me.setData({
-              [value2]: true
-            });
-            allRecord.push(obj); //选中的场次
+    }
 
-            app.yc_request('POST', 'client/VenueAccount/' + me.data.venueId, {
-              timeId: timeId,
-              venueId: me.data.venueId,
-              useTime: useTime,
-              week: week
-            }, function(datas) {
-              console.log(datas)
-              // var recordArr = datas.data.obj;
-              // that.setData({
-              //   choosed: recordArr
-              // });
-              // that.loadChoose(usetime);
-            }, function(erro) {
-              wx.showToast({
-                title: '网络走神了！',
-              })
-            });
-            console.log(e, 222222222222)
-            Dialog.close();
-          };
-        })
-        .catch(() => {
-          Dialog.close();
+    var data = this.data.dataList;
+    var obj = {
+      timeId: timeId,
+      areaId: areaId,
+      price: priceId,
+      day: me.data.indate,
+      inmonth: me.data.inmonth,
+      time: time_period
+    }
+    // 已选+可选
+    var isselect = me.data.areaOption[cgid - 1][timeId - 1].isselect;
+    var value = 'areaOption[' + (cgid - 1) + '][' + (timeId - 1) + '].isselect';
+    var allRecord = me.data.dataList;
+    // 根据数组长度判断是否增减
+    if (data.length < 4) {
+      // 改变选中状态
+      if (isselect) {
+        me.setData({
+          [value]: false
         });
-      // me.setData({
-      //   areaOption: me.data.areaOption,
-      //   dataList: allRecord
-      // });
-      // var totalmoney_t = 0; // 总价
-      // data.forEach(function(item, index) {
-      //   totalmoney_t += item.price;
-      // })
-      // me.setData({
-      //   totalMoney: totalmoney_t,
-      //   dataList: allRecord
-      // })
-      // } else {
-      //   // 超过4个 弹窗
-      //   // data.length=4
-      //   let item = allRecord.find(function(items) {
-      //     return items.timeId == obj.timeId && items.areaId == obj.areaId;
-      //   })
-      //   if (item != undefined) {
+        allRecord.forEach(function(item, index) {
+          if (item.timeId == obj.timeId && item.areaId == obj.areaId) {
+            allRecord.splice(index, 1)
+          }
+        })
+      } else {
+        me.setData({
+          [value]: true
+        });
+        allRecord.push(obj); //选中的场次
+      };
+      me.setData({
+        areaOption: me.data.areaOption,
+        dataList: allRecord
+      });
+      var totalmoney_t = 0; // 总价
+      data.forEach(function(item, index) {
+        totalmoney_t += item.price;
+      })
+      me.setData({
+        totalMoney: totalmoney_t,
+        dataList: allRecord
+      })
+    } else {
+      // 超过4个 弹窗
+      console.log(obj)
+      console.log("====================")
+      // data.length=4
+      let item = allRecord.find(function(items) {
+        return items.timeId == obj.timeId && items.areaId == obj.areaId;
+      })
+      console.log(item)
+      console.log("====================")
+      if (item != undefined) {
+        // let aa = allRecord.find(function(items) {
+        //   items.timeId != obj.timeId && items.areaId != obj.areaId
+        // })
+        me.setData({
+          [value]: false
+        });
+        allRecord.forEach(function(item, index) {
+          if (item.timeId == obj.timeId && item.areaId == obj.areaId) {
+            allRecord.splice(index, 1) //数组根据index删除场地
+            me.setData({
+              totalMoney: me.data.totalMoney - item.price, //总金额减去点击的对象金额
+              dataList: allRecord //赋值刷新选中数组
+            });
+          }
+        })
+        // me.setData({
+        //   dataList: allRecord
+        // });
+      } else {
+        wx.showToast({
+          title: '最多只选择4个',
+          image: '../../images/erro.png',
+          icon: 'erro',
+          duration: 1000
+        });
+      }
+      // allRecord.forEach(function(item, index) {
+      //   if (item.timeId == obj.timeId && item.areaId == obj.areaId) {
+      //     console.log(111)
+      //     allRecord.splice(index, 1);
       //     me.setData({
-      //       [value]: false
+      //       dataList: allRecord
       //     });
-      //     allRecord.forEach(function(item, index) {
-      //       if (item.timeId == obj.timeId && item.areaId == obj.areaId) {
-      //         allRecord.splice(index, 1) //数组根据index删除场地
-      //         me.setData({
-      //           totalMoney: me.data.totalMoney - item.price, //总金额减去点击的对象金额
-      //           dataList: allRecord //赋值刷新选中数组
-      //         });
-      //       }
-      //     })
       //   } else {
+      //     // 超过4个 弹窗
+      //     console.log(222)
       //     wx.showToast({
-      //       title: '最多只选择4个',
-      //       image: '../../images/erro.png',
+      //       title: '成功',
       //       icon: 'erro',
       //       duration: 1000
       //     });
+      //     // me.nextBtn();
+      //     // return;
       //   }
-      // }
+      // });
     }
   },
 
@@ -374,9 +377,9 @@ Page({
 
     var storageVenueId = wx.getStorageSync('venueId');
     if (storageVenueId == "") {
-      wx.setStorageSync('venueId', 1);
+      wx.setStorageSync('venueId', options.venueId);
       that.setData({
-        venueId: 1 //当前场馆ID
+        venueId: options.venueId //当前场馆ID
       })
     } else {
       that.setData({
@@ -392,11 +395,11 @@ Page({
     // });
 
 
-    var timeObj = that.data.timeList;
-    var year = timeObj.nowYear;
-    var month = timeObj.nowMonth;
-    var date = new Date().getDate();
-    var usetime = year + '-' + month + '-' + date;
+    // var timeObj = that.data.timeList;
+    // var year = timeObj.nowYear;
+    // var month = timeObj.nowMonth;
+    // var date = new Date().getDate();
+    // var usetime = year + '-' + month + '-' + date;
 
     // 加载当前日的的预订记录  未渲染
     app.yc_request('GET', 'client/ScheduleRecordApi/' + that.data.venueId + '/' + usetime, {}, function(datas) {
@@ -413,13 +416,13 @@ Page({
     // 详情页场馆信息
     app.yc_request('GET', 'client/VenueApi/' + that.data.venueId, null, function(datas) {
       var venueMsg = datas.data.obj;
-      console.log(venueMsg)
-      // that.setData({
-      //   venueName: venueMsg.venueName,
-      //   venueAddress: venueMsg.venueAddress,
-      //   avePrice: venueMsg.avePrice,
-      //   score: venueMsg.score,
-      // })
+      that.setData({
+        venueImg: venueMsg.venueImg,
+        venueName: venueMsg.venueName,
+        venueAddress: venueMsg.venueAddress,
+        avePrice: venueMsg.avePrice,
+        score: venueMsg.score,
+      })
     }, function(erro) {
       wx.showToast({
         title: '网络走神了！',
@@ -441,9 +444,7 @@ Page({
         areaobj.areaPrice = item.price;
         arr2.push(areaobj.areaId, areaobj.areaPrice)
         areaIdList.push(arr2)
-      });
-      areaIdList.pop();
-      console.log(areaIdList)
+      })
       that.setData({
         area: areaIdList
       })
@@ -508,12 +509,24 @@ Page({
     })
   },
 
+
+
+
+
+
+
+
+
+
+
+
   // 生命周期函数--监听页面加载
   onLoad: function(options) {
+    wx.setStorageSync('venueId', options.venueId);
     var storageVenueId = wx.getStorageSync('venueId');
     var that = this;
     that.setData({
-      venueId: storageVenueId //当前场馆ID
+      venueId: options.venueId //当前场馆ID
     })
     var nowDay = new Date().getDate();
     var nowYear = new Date().getFullYear();

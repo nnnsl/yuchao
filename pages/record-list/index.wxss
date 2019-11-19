@@ -1,0 +1,31 @@
+/* pages/record-list/index.wxss */
+page {
+  height: 100%;
+  background-color: #333333;
+}
+
+.serch-box {
+  width: 714rpx;
+  height: 68rpx;
+  background: rgba(211, 211, 211, 1);
+  border-radius: 34px;
+  margin: 40rpx auto 36rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: normal;
+  color: rgba(87, 87, 87, 1);
+  line-height: 10px;
+}
+
+.serch-box image {
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 34rpx;
+}
+.serch-box input{
+  width: 600rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+}

@@ -1,0 +1,95 @@
+<!--pages/my-club/index.wxml-->
+<view class="my-club">
+
+  <!-- 俱乐部信息 -->
+  <view class="club-msg">
+    <view class="club-msg-name">
+      <view class="guy-pic">
+        <image src="/images/club/guy-pic.png"></image>
+      </view>
+      <view class="club-msg-text">
+        <view class="club-title">XXXX</view>
+        <view class="msg">
+          <text>简介:</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="club-daunWei">
+      <text>团队段位：</text>
+    </view>
+  </view>
+
+  <!-- 俱乐部成员 -->
+  <view class="club-all" bindtap="member_list">
+    <view class="club-all-title">
+      <view>俱乐部成员</view>
+      <view class="guy-num">
+        <text>共</text>XXX
+        <text>人</text>
+        <image src="/images/match/yjt.png"></image>
+      </view>
+
+    </view>
+    <view class="all-box">
+
+      <view class="man">
+        <view class="man-bg">
+          <image src="/images/club/man-symbol.png"></image>
+        </view>
+        <image src="/images/club/man.png" id="man"></image>
+      </view>
+
+      <view class="woman">
+        <view class="woman-bg">
+          <image src="/images/club/woman-symbol.png"></image>
+        </view>
+        <image src="/images/club/woman.png" id="woman"></image>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 比赛 -->
+  <view class="bisai-title" bindtap="record_list">
+    <text>比赛</text>
+    <image src="/images/match/yjt.png"></image>
+  </view>
+
+  <view class="cg-content">
+    <view class="cg-left">
+      <view class="li">
+        比赛场馆：
+      </view>
+      <view class="li">
+        比赛时间：
+      </view>
+      <view class="li">
+        比赛地点：
+      </view>
+    </view>
+
+    <view class="cg-right">
+      <view class="txt">比赛结果</view>
+      <view>XXX</view>
+    </view>
+  </view>
+
+  <!-- 战绩 -->
+  <view class="zhanji-main">
+    <view class="zj-left">
+      <image src="/images/club/jb.png"></image>
+      <view class="zhanji-text">
+        <text id="zhanji">战绩:</text>
+        <text id="shenglv">胜率:</text>
+      </view>
+    </view>
+
+    <view class="zhanji-num">
+      <text id="all-num">共XXXX场</text>
+      <text id="bfb">XXX</text>
+    </view>
+
+  </view>
+
+</view>

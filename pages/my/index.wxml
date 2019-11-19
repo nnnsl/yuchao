@@ -1,0 +1,158 @@
+<view scroll-y style="height: 100%;" class="my">
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+
+<view class="header">
+  <view class="my-msg">
+
+    <view class="msg-tittle">个人基本信息</view>
+
+    <image src="/images/my/bg1.png"></image>
+  </view>
+
+  <!-- 个人信息 -->
+  <view class="userinfo">
+
+    <view class="msg-head">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+
+      <view class="middle">
+        <view class="txt">{{userMsg.levelName}}</view>
+        <image src="/images/my/duanwei.png"></image>
+      </view>
+
+      <view class="user-main">
+        <view id="username">
+          <open-data type="userNickName"></open-data>
+        </view>
+
+        <view class="win-num">
+
+          <view class="win">
+            <view style="margin-right:10rpx">胜率</view>
+            <view>{{userMsg.totalGame}}</view>
+          </view>
+
+          <view class="all-num">
+            <view style="margin-right:10rpx">总场数</view>
+            <view>{{userMsg.totalGame}}</view>
+          
+        </view>
+
+</view>
+      </view>
+    </view>
+
+    <!-- 简介 -->
+
+    <view class="introduce">
+      个人简介
+    </view>
+
+    <!-- 金币等 -->
+    <view class="head-bottom">
+
+      <view class="gold li">
+        <image src="/images/my/jinbi.png"></image>
+        <view class="txt">
+          <view class="txt-t">金币</view>
+          <view class="txt-num">{{userMsg.money}}个</view>
+        </view>
+      </view>
+
+      <view class="grade li">
+        <image src="/images/my/dengji.png"></image>
+        <view class="txt">
+          <view class="txt-t">等级</view>
+          <view class="txt-num">lv{{userMsg.levelCount}}</view>
+        </view>
+      </view>
+
+      <view class="fraction li">
+        <image src="/images/my/xinyufen.png"></image>
+        <view class="txt">
+          <view class="txt-t">信誉分</view>
+          <view class="txt-num">{{userMsg.reputation}}分</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+<!-- 订单 -->
+  <view class="dingdan-content">
+
+    <view class="dingdan-tittle">我的订单</view>
+
+    <view class="order-box">
+      <view class="cg-order" bindtap="cg_Order">
+        <view class="order-txt">场馆订单</view>
+        <image src="/images/my/order-bg.png"></image>
+      </view>
+
+      <view class="bs-order" bindtap="bs_Order">
+        <view class="order-txt">比赛订单</view>
+        <image src="/images/my/order-bg.png"></image>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="form-main">
+
+    <view bindtap="real_name" class="li">
+      <view class="left">
+        <image src="/images/my/renz.png"></image>
+        <text>个人排名</text>
+      </view>
+      <view class="right">
+        <image src="/images/my/yjt.png"></image>
+      </view>
+    </view>
+
+    <view bindtap="Apply_cp" class="li">
+      <view class="left">
+        <image src="/images/my/caipan.png"></image>
+        <text>申请裁判</text>
+      </view>
+      <view class="right">
+        <image src="/images/my/yjt.png"></image>
+      </view>
+    </view>
+
+    <view class="li">
+      <view class="left">
+        <image src="/images/my/anquan.png"></image>
+        <text>账号与安全</text>
+      </view>
+      <view class="right">
+        <image src="/images/my/yjt.png"></image>
+      </view>
+    </view>
+
+    <view class="li">
+      <view class="left">
+        <image src="/images/my/rule.png"></image>
+        <text>规则说明</text>
+      </view>
+      <view class="right">
+        <image src="/images/my/yjt.png"></image>
+      </view>
+    </view>
+
+
+    <view class="about li">
+      <view class="left">
+        <image src="/images/my/about.png"></image>
+        <text>关于我们</text>
+      </view>
+      <view class="right">
+        <image src="/images/my/yjt.png"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

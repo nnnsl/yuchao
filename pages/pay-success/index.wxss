@@ -1,0 +1,62 @@
+/* pages/pay-success/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #333333;
+}
+
+.pay-pic, .pay-pic image {
+  width: 248rpx;
+  height: 230rpx;
+}
+
+.pay-pic {
+  margin: 110rpx auto 50rpx;
+}
+
+.pay-tittle {
+  width: 158rpx;
+  height: 34rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 auto 50rpx;
+  text-align: center;
+}
+
+.pay-msg {
+  width: 336rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgba(151, 151, 151, 1);
+  margin: 0 auto 100rpx;
+}
+
+.btn {
+  width: 600rpx;
+  height: 66rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-li {
+  width: 222rpx;
+  height: 66rpx;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 66rpx;
+  text-align: center;
+}
+
+.view-orders {
+  color: rgba(51, 51, 51, 1);
+  background: rgba(248, 248, 248, 1);
+}
+
+.return-home {
+  background: linear-gradient(0deg, rgba(255, 192, 0, 1) 0%, rgba(253, 222, 127, 1) 100%);
+  color: rgba(195, 109, 22, 1);
+}

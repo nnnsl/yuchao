@@ -1,0 +1,142 @@
+/* pages/reserve/index.wxss */
+
+page, .reserve {
+  height: 100%;
+  background-color: #333;
+   overflow: auto;
+}
+
+.reserve {
+  padding-bottom: 360rpx;
+}
+
+/* scroll-view {
+  -webkit-overflow-scrolling: touch;
+} */
+
+.head {
+  width: 750rpx;
+  height: 350rpx;
+  background: rgba(67, 67, 67, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head image {
+  width: 712rpx;
+  height: 184rpx;
+}
+
+.changy-box {
+  width: 750rpx;
+  height: 240rpx;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.2);
+  margin-top: 20rpx;
+}
+
+.changy-main {
+  width: 716rpx;
+  height: 208rpx;
+  margin: 0 auto;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 20rpx 0 0 30rpx;
+}
+
+.changy-logo {
+  width: 104rpx;
+  height: 28rpx;
+  background: #313131;
+  text-align: center;
+  line-height: 28rpx;
+  border-radius: 14rpx;
+  font-weight: bold;
+  color: rgba(255, 192, 0, 1);
+  font-size: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.all-msg {
+  display: flex;
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+}
+
+.pic-box {
+  width: 218rpx;
+  height: 132rpx;
+  background: rgba(210, 210, 210, 1);
+  margin-right: 30rpx;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 6rpx 0;
+}
+
+.tittle {
+  color: #fff;
+}
+
+.score {
+  margin: 10rpx 0 0 240rpx;
+  color: #ffc000;
+}
+
+.tj-tittle {
+  width: 104rpx;
+  height: 28rpx;
+  background: #ffc000;
+  text-align: center;
+  line-height: 28rpx;
+  border-radius: 14rpx;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20rpx;
+  margin: 30rpx 50rpx;
+}
+
+/* 推荐场馆 */
+
+.tj-content {
+  width: 716rpx;
+  height: 184rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 14px;
+  margin: 22rpx auto 0;
+  display: flex;
+  box-sizing: border-box;
+  padding: 26rpx 14rpx 26rpx 26rpx;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.tj-pic image{
+  width: 200rpx;
+  height: 132rpx;
+  /* background: rgba(210, 210, 210, 1); */
+  margin-right: 30rpx;
+}
+
+.tj-msg {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 6rpx 0;
+  color: rgba(153, 153, 153, 1);
+}
+
+.tj-msg-score {
+  margin-top: 10rpx;
+  color: #ffc000;
+  width: 150rpx;
+  display: flex;
+}

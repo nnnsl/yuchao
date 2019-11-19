@@ -1,0 +1,83 @@
+/* pages/join-club/index.wxss */
+
+page, .join-club {
+  background-color: #333;
+  height: 100%;
+}
+.join-club{
+  letter-spacing: 2rpx;
+}
+
+.serch-box {
+  width: 714rpx;
+  height: 68rpx;
+  margin: 40rpx auto 36rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20rpx;
+  line-height: 10px;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 32rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.serch-box image {
+  width: 26rpx;
+  height: 26rpx;
+  margin: 0 10rpx 0 25rpx;
+}
+
+.serch-box input {
+  width: 600rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.club-list {
+  width: 626rpx;
+  height: 128rpx;
+  background: rgba(67, 67, 67, 1);
+  border-radius: 14rpx;
+  margin: 0 auto 14rpx;
+  box-sizing: border-box;
+  padding: 28rpx 40rpx 26rpx 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 74rpx;
+  height: 74rpx;
+  margin-right: 20rpx;
+}
+
+.list-right image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.list-left {
+  display: flex;
+}
+
+.club-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.msg-tittle {
+  font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 8rpx;
+}
+
+.guy-list {
+  font-size: 16rpx;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+}

@@ -1,0 +1,150 @@
+<!--pages/club/index.wxml-->
+<van-dialog id="van-dialog" />
+<view class="allView">
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+  <!-- 未加入 -->
+  <view class="club" wx:if="{{joinStateus==0}}">
+    <view class="club-main">
+      <view class="found-logo" bindtap="create_club">
+        <view class="found-text">
+          <image src="/images/club/found-logo.png"></image>
+          <text>创建俱乐部</text>
+        </view>
+        <image src="/images/club/yjjx.png"></image>
+      </view>
+
+      <view class="join-logo" bindtap="join_club">
+        <view class="join-text">
+      <image src="{{item.venueImg?item.venueImg:defaultImg}}" lazy-load="true" alt="/images/reserve/renue.jpg"></image>
+          <text>加入俱乐部</text>
+
+        </view>
+        <image src="/images/club/yjjx.png"></image>
+      </view>
+    </view>
+
+    <image src="/images/club/club-bg.png" id="club-bg"></image>
+  </view>
+
+
+  <!-- 已加入 -->
+
+
+  <view class="my-club" wx:else>
+    <!-- 俱乐部信息 -->
+    <view class="club-msg">
+      <view class="club-msg-name">
+        <view class="guy-pic">
+          <image src="https://fragmenttime.com:8081/images/{{avatarUrl_club}}" style="width:100%;height: 100%;"></image>
+        </view>
+        <view class="club-msg-text">
+          <view class="club-title">{{club_meg.clubName}}</view>
+          <view class="msg">
+            <text>地区:</text>
+            <text>{{club_meg.clubArea}}</text>
+            <text>{{club_meg.clubCity}}</text>
+          </view>
+        </view>
+        <view class="club-btn">
+          <van-button size="small" type="danger" bind:click="quit">{{club_text}}</van-button>
+        </view>
+      </view>
+
+      <view class="club-daunWei">
+        <text>简介：</text>
+        <text>{{club_meg.clubDesc}}</text>
+      </view>
+    </view>
+
+    <!-- 俱乐部成员 -->
+    <view class="club-all" bindtap="member_list">
+      <view class="club-all-title">
+        <view>俱乐部成员</view>
+        <view class="guy-num">
+          <text>共</text>{{clubMsg[1].length}}
+          <text>人</text>
+          <image src="/images/match/yjt.png"></image>
+        </view>
+      </view>
+      <view class="all-box">
+
+        <view class="man">
+          <view class="man-bg" style="z-index: 9999999;">
+            <image src="/images/club/man-symbol.png"></image>
+          </view>
+          <view style="height: 100%;width: 75%;display:flex;float: right;">
+            <view wx:for="{{man}}" wx:key="index" style="width:125rpx;height:125rpx;">
+              <image src="{{item.avatarUrl}}" style="width:100%;height:100%;position: relative;z-index: 11;"></image>
+            </view>
+          </view>
+          <image src="/images/club/man.png" style="position: relative;top: -62px;" id="man"></image>
+        </view>
+
+        <view class="woman">
+          <view class="woman-bg" style="z-index: 9999999;">
+            <image src="/images/club/woman-symbol.png"></image>
+          </view>
+          <view style="height: 100%;width: 75%;display:flex;float: right;display: flex;justify-content: flex-end;margin-right: 83px;">
+            <view wx:for="{{woman}}" wx:key="index" style="width:125rpx;height:125rpx;">
+              <image src="{{item.avatarUrl}}" style="width:100%;height:100%;position: relative;z-index: 11;"></image>
+            </view>
+          </view>
+          <image src="/images/club/woman.png" style="position: relative;top: -62px;" id="woman"></image>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 比赛 -->
+    <view class="bisai-title" bindtap="record_list">
+      <text>比赛</text>
+      <image src="/images/match/yjt.png"></image>
+    </view>
+    <!-- 弹窗 -->
+    <show_dialog id='showModal' title='团体赛只有团长才能申请哦！可以联系你的团长进行申请~' bind:error='no' bind:success="yes">
+    </show_dialog>
+
+    <view class="cg-content" wx:for="{{clubMsg[2]}}" wx:key="index">
+      <view class="cg-left" wx:if="{{clubMsg[2] != '' ||clubMsg[3] != null}}">
+        <view class="li">
+          比赛场馆：{{item.venueName}}
+        </view>
+        <view class="li">
+          比赛时间：{{item.gameTime}}
+        </view>
+        <view class="li">
+          比赛地点：{{item.venueAddress}}
+        </view>
+      </view>
+      <view class="cg-left" wx:else>
+        <view class="li">
+          未参加比赛
+        </view>
+      </view>
+
+      <view class="cg-right">
+        <view class="txt">比赛结果</view>
+        <view wx:if="{{clubMsg[2] != '' ||clubMsg[3] != null}}">赢</view>
+        <view wx:else>--</view>
+      </view>
+    </view>
+    <!-- 战绩 -->
+    <view class="zhanji-main">
+      <view class="zj-left">
+        <image src="/images/club/jb.png"></image>
+        <view class="zhanji-text">
+          <text id="zhanji">战绩:</text>
+          <text id="shenglv">胜率:</text>
+        </view>
+      </view>
+
+      <view class="zhanji-num">
+        <text id="all-num">共{{clubMsg[3].totalGame}}场</text>
+        <text id="bfb">{{clubMsg[3].winRate}}%</text>
+      </view>
+    </view>
+    <view style="padding:26rpx;" hidden="{{url_show}}">
+      <van-button type="info" size="large" bind:click="team_game">快速进入团体赛</van-button>
+    </view>
+  </view>
+</view>

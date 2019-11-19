@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+   "tabbar": "/component/custom-tabbar/tabbar"
+  },
+  "navigationBarTitleText": "俱乐部",
+  "navigationBarBackgroundColor": "#FFC000",
+  "disableScroll": true
+}

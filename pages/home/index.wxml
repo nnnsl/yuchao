@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="home">
+<van-dialog id="van-dialog" />
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+
+  <!-- 背景阴影 -->
+  <view class="bg-shadow">
+    <!-- 椭圆 -->
+    <view class="ty">
+      <image src="/images/home/ty.png"></image>
+    </view>
+    <!-- 人 -->
+    <!-- <view class="guy">
+      <image src="/images/home/guy.png"></image>
+    </view> -->
+
+    <image src="/images/home/bg.png" id="bg"></image>
+
+  </view>
+
+  <!-- 战绩 -->
+  <view class="result">
+
+    <!-- 胜负 -->
+    <view class="win-fail li-main">
+
+      <view class="win li">
+        <view class="txt">
+          <view>胜场：
+          <text>{{userMsg.winCount}}</text>
+          </view>
+        </view>
+        <image src="/images/home/sbx.png"></image>
+      </view>
+
+      <view class="fail li">
+        <view class="txt">
+          <view>负场：
+          <text>{{userMsg.losCount}}</text>
+          </view>
+        </view>
+        <image src="/images/home/sbx.png"></image>
+      </view>
+
+    </view>
+
+    <!-- 胜率 -->
+    <view class="shenglv li">
+      <view class="txt">
+         <view>胜率：
+          <text>{{userMsg.totalGame}}</text>
+          </view>
+      </view>
+      <image src="/images/home/yjjx.png"></image>
+    </view>
+
+  <!-- 更多 -->
+  <view class="show-more" bindtap="goTotalRanks">
+  <image src="/images/home/jt.png"></image>
+  <text>查看全部排名</text>
+  
+  </view>
+
+  </view>
+
+
+
+</view>

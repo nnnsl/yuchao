@@ -1,0 +1,22 @@
+<!--pages/pay-success/index.wxml-->
+<view class="pay-success">
+
+  <view class="pay-pic">
+    <image src="/images/match/pay-success.png"></image>
+  </view>
+
+  <view class="pay-tittle">
+    支付成功
+  </view>
+
+  <view class="pay-msg">
+    比赛正在匹配中，请您耐心等待
+  </view>
+
+  <view class="btn">
+    <view class="view-orders btn-li" bindtap="view_orders">查看订单</view>
+    <view class="return-home btn-li" bindtap="return_home">返回首页</view>
+
+  </view>
+
+</view>

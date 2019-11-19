@@ -1,0 +1,40 @@
+<!--pages/total-rankings/index.wxml-->
+<view class="total-rankings">
+
+  <!-- 自己排名 -->
+  <view class="total-rankings-self">
+    <!-- 头像 -->
+    <image src="{{selfRanking.avatarUrl}}" id="selfPic"></image>
+    <!-- 信息 -->
+    <view class="msg-middle">
+      <view class="nickName">{{selfRanking.nickName}}</view>
+      <view class="levelName">{{selfRanking.levelName}}</view>
+    </view>
+    <!-- 地区 -->
+    <view class="province">{{selfRanking.province}}</view>
+  </view>
+
+  <!-- 全部排名 -->
+  <view class="total-rankings-all">
+    <view class="li" wx:for="{{allRanking}}" wx:key="{{index}}">
+      <!-- 索引排名 -->
+      <view class="index">
+        {{index + 1}}
+      </view>
+      <!-- 头像 -->
+      <image src="{{item.avatarUrl}}" id="selfPic"></image>
+      <!-- 信息 -->
+      <view class="msg-middle">
+        <view class="nickName">{{item.nickName}}</view>
+        <!-- <view class="levelName">{{item.province}}</view> -->
+      </view>
+      <!-- 地区 -->
+      <view class="middle">
+        <view class="txt">{{item.levelName}}</view>
+        <image src="/images/my/duanwei.png"></image>
+      </view>
+      <!-- <view class="province">{{item.levelName}}</view> -->
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-switch": "/dist/switch/index"
+  },
+  "navigationBarTitleText": "申请裁判",
+  "navigationBarBackgroundColor": "#FFC000"
+}
