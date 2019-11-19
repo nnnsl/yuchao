@@ -1,25 +1,26 @@
 <!--pages/join-club/index.wxml-->
 <view class="join-club">
 
-<view class="serch-box">
+  <view class="serch-box">
     <image src="/images/club/serch.png"></image>
     <input placeholder="搜索你要查询的俱乐部"></input>
   </view>
 
   <view class="club-list" bindtap="goClubMsg" wx:for="{{clubList}}" wx:key="index" id="{{item.id}}">
     <view class="list-left">
-    <view class="image">
-    <image style="width:100%;height:100%;" src="https://fragmenttime.com:8081/images/{{item.clubLogo}}"></image>
+      <view class="image">
+        <image style="width:100%;height:100%;" src="https://fragmenttime.com:8081/images/{{item.clubLogo}}"></image>
+      </view>
+      <view class="club-msg">
+        <view class="msg-tittle">{{item.clubName}}</view>
+        <view class="guy-list">简介:
+          <text>{{item.clubDesc}}</text>
+        </view>
+      </view>
     </view>
-    <view class="club-msg">
-    <view class="msg-tittle">{{item.clubName}}</view>
-    <view class="guy-list">简介:
-    <text>{{item.clubDesc}}</text>
+    <view class="list-right">
+      <image src="/images/club/add.png"></image>
     </view>
-    </view>
-    </view>
-   <view class="list-right">
-    <image src="/images/club/add.png"></image></view>
   </view>
 
 </view>

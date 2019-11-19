@@ -1,42 +1,69 @@
 <!--pages/club-msg/index.wxml-->
 <view class="club-msg">
 
-    <!-- 俱乐部信息 -->
+  <!-- 俱乐部信息 -->
   <view class="club-msg-head">
     <view class="club-msg-name">
       <view class="guy-pic">
-        
+        <image src="https://fragmenttime.com:8081/images/{{avatarUrl_club}}" style="width:100%;height: 100%;"></image>
       </view>
       <view class="club-msg-text">
         <view class="club-title">{{clubMsg.clubName}}</view>
         <view class="msg">
           <text>地区: </text>
-            <text>{{clubMsg.clubArea}}</text>
-            <text>{{clubMsg.clubCity}}</text>
-         
+          <text>{{clubMsg.clubArea}}</text>
+          <text>{{clubMsg.clubCity}}</text>
+
         </view>
       </view>
     </view>
 
     <view class="club-daunWei">
       <text>简介:</text>
-        <text>{{clubMsg.clubDesc}}</text>
-      
+      <text>{{clubMsg.clubDesc}}</text>
     </view>
   </view>
 
   <!-- 成员 -->
-  <view class="guy-list" bindtap="goMenmberList">
-    <view class="guy-list-left">
-    <view class="li">
-        <view class="iamge"></view>
-        <view>昵称</view>
+  <view class="club-all" bindtap="member_list">
+    <view class="club-all-title">
+      <view>俱乐部成员</view>
+      <view class="guy-num">
+        <text>共</text>{{person_num}}
+        <text>人</text>
+        <image src="/images/match/yjt.png"></image>
+      </view>
     </view>
+    <view class="all-box">
+
+      <view class="man">
+        <view class="man-bg" style="z-index: 9999999;">
+          <image src="/images/club/man-symbol.png"></image>
+        </view>
+        <view style="height: 100%;width: 75%;display:flex;float: right;">
+          <view wx:for="{{man}}" wx:key="index" style="width:125rpx;height:125rpx;">
+            <image src="{{item.avatarUrl}}" style="width:100%;height:100%;position: relative;z-index: 11;"></image>
+          </view>
+        </view>
+        <image src="/images/club/man.png" style="position: relative;top: -62px;" id="man"></image>
+      </view>
+
+      <view class="woman">
+        <view class="woman-bg" style="z-index: 9999999;">
+          <image src="/images/club/woman-symbol.png"></image>
+        </view>
+        <view style="height: 100%;width: 75%;display:flex;float: right;display: flex;justify-content: flex-end;margin-right: 83px;">
+          <view wx:for="{{woman}}" wx:key="index" style="width:125rpx;height:125rpx;">
+            <image src="{{item.avatarUrl}}" style="width:100%;height:100%;position: relative;z-index: 11;"></image>
+          </view>
+        </view>
+        <image src="/images/club/woman.png" style="position: relative;top: -62px;" id="woman"></image>
+      </view>
+
     </view>
-    <view class="guy-list-right">查看更多</view>
   </view>
 
-   <!-- 战绩 -->
+  <!-- 战绩 -->
   <view class="zhanji-main">
     <view class="zj-left">
       <image src="/images/club/jb.png"></image>
@@ -47,10 +74,9 @@
     </view>
 
     <view class="zhanji-num">
-      <text id="all-num">共XXXX场</text>
-      <text id="bfb">XXX</text>
+      <text id="all-num">共{{clubMsg[3].totalGame}}场</text>
+      <text id="bfb">{{clubMsg[3].winRate}}%</text>
     </view>
-
   </view>
 
   <view class="create-btn" bindtap="apply_join" id="{{clubId}}">
@@ -58,6 +84,6 @@
     <image src="/images/club/found.png"></image>
   </view>
 
-<van-dialog id="van-dialog" />
-  
+  <van-dialog id="van-dialog" />
+
 </view>

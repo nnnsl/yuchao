@@ -5,6 +5,7 @@
     "van-button": "/dist/button/index",
     "van-dialog": "/dist/dialog/index"
   },
+  "enablePullDownRefresh": true,
   "navigationBarTitleText": "俱乐部",
   "navigationBarBackgroundColor": "#FFC000",
   "disableScroll": false

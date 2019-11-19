@@ -8,6 +8,7 @@ Page({
    */
   data: {
     mymeg: '',
+    person_num: '',
     url_show: true,
     club_text: '退出',
     club_meg: '',
@@ -173,6 +174,9 @@ Page({
         // 已加入就获取俱乐部成员的信息
         app.yc_request('GET', 'client/ClubMsgApi/' + that.data.joinStateus, {}, function(datas) {
           var allMsg = datas.data.obj;
+          that.setData({
+            person_num: allMsg[1].length
+          });
           var map = {},
             dest = [];
           for (var i = 0; i < allMsg[1].length; i++) {
@@ -248,7 +252,9 @@ Page({
   no() {
     this.show_dialog.hidePopup();
   },
-
+  onPullDownRefresh: function() {
+    console.log("!@121");
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

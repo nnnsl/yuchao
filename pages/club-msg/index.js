@@ -6,7 +6,13 @@ Page({
    */
   data: {
     clubId: '',
-    clubMsg: ''
+    clubMsg: '',
+
+    joinStateus: '',
+    clubId: '',
+    avatarUrl_club: '',
+    man: '',
+    women: ''
   },
 
   // 跳转到成员列表
@@ -20,6 +26,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options);
     var clubId = options.clubId;
     var that = this;
     that.setData({
@@ -30,8 +37,52 @@ Page({
     app.yc_request('POST', 'client/ClubApi/' + that.data.clubId, null, function(datas) {
       var allMsg = datas.data.obj;
       that.setData({
-        clubMsg: allMsg
+        clubMsg: allMsg,
+        avatarUrl_club: allMsg.clubLogo
       })
+    }, function(erro) {
+      wx.showToast({
+        title: '网络走神了！',
+      })
+    });
+    // 已加入就获取俱乐部成员的信息
+    app.yc_request('GET', 'client/ClubMsgApi/' + that.data.clubId, {}, function(datas) {
+      var allMsg = datas.data.obj;
+      that.setData({
+        person_num: allMsg[1].length
+      });
+      var map = {},
+        dest = [];
+      for (var i = 0; i < allMsg[1].length; i++) {
+        var ai = allMsg[1][i];
+        if (!map[ai.gender]) {
+          dest.push({
+            gender: ai.gender,
+            data: [ai]
+          });
+          map[ai.gender] = ai;
+        } else {
+          for (var j = 0; j < dest.length; j++) {
+            var dj = dest[j];
+            if (dj.gender == ai.gender) {
+              dj.data.push(ai);
+              break;
+            }
+          }
+        }
+      }
+      if (dest[1] != undefined) {
+        that.setData({
+          man: dest[0].data == undefined ? '' : dest[0].data,
+          woman: dest[1].data == undefined ? '' : dest[0].data
+        })
+      } else {
+        that.setData({
+          man: dest[0].data == undefined ? '' : dest[0].data,
+          woman: ''
+        })
+      }
+
     }, function(erro) {
       wx.showToast({
         title: '网络走神了！',
@@ -43,7 +94,7 @@ Page({
   apply_join(e) {
     var that = this;
 
-  // 确认取消弹框
+    // 确认取消弹框
     Dialog.confirm({
       title: '确认加入吗?',
     }).then(() => {
@@ -56,7 +107,8 @@ Page({
           url: '/pages/club/index',
           success: function(e) {
             var page = getCurrentPages().pop();
-            if (page == undefined || page == null) return;
+            if (page == undefined || page == null)
+              return;
             page.onLoad();
           }
         })

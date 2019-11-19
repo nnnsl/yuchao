@@ -15,7 +15,7 @@
 
       <view class="join-logo" bindtap="join_club">
         <view class="join-text">
-      <image src="{{item.venueImg?item.venueImg:defaultImg}}" lazy-load="true" alt="/images/reserve/renue.jpg"></image>
+          <image src="/images/club/add.png"></image>
           <text>加入俱乐部</text>
 
         </view>
@@ -61,7 +61,7 @@
       <view class="club-all-title">
         <view>俱乐部成员</view>
         <view class="guy-num">
-          <text>共</text>{{clubMsg[1].length}}
+          <text>共</text>{{person_num}}
           <text>人</text>
           <image src="/images/match/yjt.png"></image>
         </view>
